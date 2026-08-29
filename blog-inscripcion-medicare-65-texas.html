@@ -68,13 +68,14 @@
 </footer>
 
 <script>
-// BASE64 ENCODED PHONE NUMBER - NOT VISIBLE IN SOURCE
 document.addEventListener('DOMContentLoaded', function() {
-  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');  // (469) 556-3648
-  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');  // +14695563648
+  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');
+  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');
   
-  document.getElementById('cta-phone').textContent = phone;
-  document.getElementById('cta-call').href = phoneLink;
+  var ctaPhone = document.getElementById('cta-phone');
+  if (ctaPhone) { ctaPhone.textContent = phone; }
+  var ctaCall = document.getElementById('cta-call');
+  if (ctaCall) { ctaCall.href = phoneLink; }
 });
 </script>
 </body>

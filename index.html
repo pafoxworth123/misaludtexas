@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4K3GFSDMK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -35,7 +34,6 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
 
-  /* LANG TOGGLE */
   .lang-toggle {
     position: fixed; top: 72px; right: 1.5rem; z-index: 99;
     display: flex; background: rgba(44,62,80,0.95); border-radius: 20px;
@@ -48,7 +46,6 @@
   }
   .lang-btn.active { background: var(--red); color: white; border-radius: 20px; }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(44,62,80,0.97); backdrop-filter: blur(10px);
@@ -63,20 +60,18 @@
   .nav-cta { background: var(--red); color: white; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
   .nav-cta:hover { background: var(--red-light); }
 
-  /* BILINGUAL PAIRS - Spanish larger & lighter */
   .bi { display: flex; flex-direction: column; gap: 0.15rem; }
   .bi .en { color: inherit; }
   .bi .es { 
     color: inherit; 
     font-style: normal; 
-    font-size: 1.05em;   /* One size larger */
-    opacity: 0.85;        /* One shade lighter, not too faded */
+    font-size: 1.05em;
+    opacity: 0.85;
   }
   body.spanish .bi .en { display: none; }
   body.spanish .bi .es { opacity: 1; font-style: normal; font-size: 1.05em; }
   body.english .bi .es { display: none; }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 50%, var(--charcoal-mid) 100%);
@@ -98,7 +93,6 @@
   .hero-trust-item { display: flex; align-items: center; gap: 0.5rem; color: rgba(200,220,240,0.8); font-size: 0.95rem; }
   .hero-trust-item .check { color: var(--green-check); font-size: 1.1rem; }
 
-  /* SECTIONS */
   .about { background: var(--white); padding: 5rem 2rem; }
   .services { background: var(--cream); padding: 5rem 2rem; }
   .blog { background: var(--white); padding: 5rem 2rem; }
@@ -109,7 +103,6 @@
   .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--charcoal); margin-bottom: 1.25rem; line-height: 1.2; }
   .why .section-title { color: white; }
 
-  /* ABOUT GRID */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2.5rem; align-items: center; }
   .about-photo-wrap { position: relative; }
   .about-photo-wrap::before { content: ''; position: absolute; top: -12px; left: -12px; right: 12px; bottom: 12px; border: 3px solid var(--red); border-radius: 4px; z-index: 0; }
@@ -117,7 +110,6 @@
   .about-text p { color: var(--text-mid); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1rem; }
   .about-text strong { color: var(--charcoal); }
 
-  /* SERVICES GRID */
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
   .service-card { background: var(--white); border-radius: 8px; padding: 2rem; border: 1px solid rgba(44,62,80,0.1); border-top: 4px solid var(--red); transition: transform 0.2s, box-shadow 0.2s; }
   .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(44,62,80,0.12); }
@@ -126,7 +118,6 @@
   .service-card h3 .es-title { display: block; font-size: 0.85rem; color: var(--red); font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-style: normal; margin-bottom: 0.4rem; }
   .service-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; }
 
-  /* BLOG GRID */
   .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
   .blog-card { background: var(--cream); border-radius: 8px; padding: 2rem; border: 1px solid rgba(44,62,80,0.12); border-top: 4px solid var(--red); text-decoration: none; color: var(--text-dark); transition: all 0.2s; display: flex; flex-direction: column; }
   .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(44,62,80,0.12); border-top-color: var(--red-light); }
@@ -135,14 +126,12 @@
   .blog-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
   .blog-read-more { color: var(--red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; }
 
-  /* WHY GRID */
   .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
   .why-item { text-align: center; }
   .why-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--red-light); display: block; margin-bottom: 0.5rem; }
   .why-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
   .why-item p { font-size: 0.9rem; color: rgba(200,220,240,0.7); line-height: 1.5; }
 
-  /* CONTACT */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2.5rem; align-items: start; }
   .contact-methods { display: flex; flex-direction: column; gap: 1.25rem; }
   .contact-method { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid rgba(44,62,80,0.12); text-decoration: none; color: var(--text-dark); transition: all 0.2s; background: var(--cream); }
@@ -164,7 +153,6 @@
   .form-submit:hover { background: var(--red-light); }
   .form-note { font-size: 0.8rem; color: var(--text-light); text-align: center; }
 
-  /* FOOTER */
   footer { background: var(--charcoal-dark); color: rgba(200,220,240,0.7); padding: 2.5rem 2rem; text-align: center; border-top: 3px solid var(--red); }
   footer .brand { font-family: 'Playfair Display', serif; color: white; font-size: 1.3rem; margin-bottom: 0.5rem; }
   footer p { font-size: 0.85rem; line-height: 1.7; }
@@ -207,7 +195,6 @@
   <button class="lang-btn" onclick="setLang('spanish')">ES</button>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-badge">🇲🇽 Bilingual Medicare Broker · Licensed in Texas</div>
@@ -218,8 +205,8 @@
       </div>
     </h1>
     <p class="hero-desc bi">
-      <span class="en">Navigating Medicare is confusing — especially without guidance in your language. I'm Paul Foxworth, a licensed Medicare broker serving Latino seniors across Texas. Let's find the right plan for you, together. Free of charge.</span>
-      <span class="es">Navegar Medicare puede ser confuso — especialmente sin orientación en tu idioma. Soy Paul Foxworth, corredor de Medicare con licencia sirviendo a adultos mayores latinos en Texas. Juntos encontramos el plan correcto para ti. Sin ningún costo.</span>
+      <span class="en">Navigating Medicare is confusing — especially without guidance in your language. I'm Paul Antonio Foxworth, a licensed Medicare broker serving Latino seniors across Texas. Let's find the right plan for you, together. Free of charge.</span>
+      <span class="es">Navegar Medicare puede ser confuso — especialmente sin orientación en tu idioma. Soy Paul Antonio Foxworth, corredor de Medicare con licencia sirviendo a adultos mayores latinos en Texas. Juntos encontramos el plan correcto para ti. Sin ningún costo.</span>
     </p>
     <div class="hero-actions">
       <a href="#" class="btn-primary" id="call-btn">
@@ -238,7 +225,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-inner">
     <p class="section-label bi"><span class="en">About</span><span class="es">Acerca de Mí</span></p>
@@ -252,8 +238,8 @@
       </div>
       <div class="about-text">
         <p class="bi">
-          <span class="en">Hi, I'm <strong>Paul Foxworth</strong>, a licensed Medicare broker based in Texas. I specialize in helping Latino seniors navigate Medicare — one of the most confusing systems in American healthcare.</span>
-          <span class="es">Hola, soy <strong>Paul Foxworth</strong>, corredor de Medicare con licencia en Texas. Me especializo en ayudar a adultos mayores latinos a navegar Medicare — uno de los sistemas más complicados de la salud americana.</span>
+          <span class="en">Hi, I'm <strong>Paul Antonio Foxworth</strong>, a licensed Medicare broker based in Texas. I specialize in helping Latino seniors navigate Medicare — one of the most confusing systems in American healthcare.</span>
+          <span class="es">Hola, soy <strong>Paul Antonio Foxworth</strong>, corredor de Medicare con licencia en Texas. Me especializo en ayudar a adultos mayores latinos a navegar Medicare — uno de los sistemas más complicados de la salud americana.</span>
         </p>
         <p class="bi">
           <span class="en">I understand the frustration of making important healthcare decisions without clear guidance — especially when language and culture add another layer of complexity.</span>
@@ -268,7 +254,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-inner">
     <p class="section-label bi"><span class="en">What I Help With</span><span class="es">Cómo Te Ayudo</span></p>
@@ -329,7 +314,6 @@
   </div>
 </section>
 
-<!-- BLOG -->
 <section class="blog" id="blog">
   <div class="section-inner">
     <p class="section-label bi">
@@ -344,7 +328,7 @@
       <a href="blog-costo-medicare-parte-b-texas.html" class="blog-card">
         <div class="blog-card-icon">💰</div>
         <h3>Cuánto cuesta Medicare Parte B en Texas</h3>
-        <p>Prima estándar $202.90, deducible, coseguro y recargos IRMAA según ingresos.</p>
+        <p>Costo estándar $202.90, deducible, coseguro y recargos IRMAA según ingresos.</p>
         <span class="blog-read-more">Leer más →</span>
       </a>
       <a href="blog-inscripcion-medicare-65-texas.html" class="blog-card">
@@ -363,7 +347,6 @@
   </div>
 </section>
 
-<!-- WHY -->
 <section class="why" id="why">
   <div class="section-inner">
     <p class="section-label" style="color:rgba(255,120,100,0.8)" >
@@ -398,7 +381,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-inner">
     <p class="section-label bi"><span class="en">Get In Touch</span><span class="es">Contáctame</span></p>
@@ -498,6 +480,33 @@
 </footer>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');
+  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');
+  var whatsappLink = 'https://wa.me/' + atob('MTQ2OTU1NjM2NDg=');
+  
+  var heroPhone = document.getElementById('hero-phone');
+  if (heroPhone) { heroPhone.textContent = phone; }
+  var callBtn = document.getElementById('call-btn');
+  if (callBtn) { callBtn.href = phoneLink; }
+  var whatsappBtn = document.getElementById('whatsapp-btn');
+  if (whatsappBtn) { whatsappBtn.href = whatsappLink; }
+  
+  var contactPhone = document.getElementById('contact-phone');
+  if (contactPhone) { contactPhone.textContent = phone; }
+  var contactCall = document.getElementById('contact-call');
+  if (contactCall) { contactCall.href = phoneLink; }
+  var contactWhatsapp = document.getElementById('contact-whatsapp');
+  if (contactWhatsapp) { contactWhatsapp.href = whatsappLink; }
+  
+  var footerPhone = document.getElementById('footer-phone');
+  if (footerPhone) { footerPhone.textContent = phone; }
+  var footerCall = document.getElementById('footer-call');
+  if (footerCall) { footerCall.href = phoneLink; }
+  var footerWhatsapp = document.getElementById('footer-whatsapp');
+  if (footerWhatsapp) { footerWhatsapp.href = whatsappLink; }
+});
+
 function setLang(lang) {
   document.body.className = lang;
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
@@ -523,28 +532,6 @@ function handleSubmit(e) {
   btn.style.background = '#27ae60';
   btn.disabled = true;
 }
-
-// BASE64 ENCODED PHONE NUMBERS - NOT VISIBLE IN SOURCE
-document.addEventListener('DOMContentLoaded', function() {
-  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');  // (469) 556-3648
-  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');  // +14695563648
-  var whatsappLink = 'https://wa.me/' + atob('MTQ2OTU1NjM2NDg=');  // 14695563648
-  
-  // Hero
-  document.getElementById('hero-phone').textContent = phone;
-  document.getElementById('call-btn').href = phoneLink;
-  document.getElementById('whatsapp-btn').href = whatsappLink;
-  
-  // Contact
-  document.getElementById('contact-phone').textContent = phone;
-  document.getElementById('contact-call').href = phoneLink;
-  document.getElementById('contact-whatsapp').href = whatsappLink;
-  
-  // Footer
-  document.getElementById('footer-phone').textContent = phone;
-  document.getElementById('footer-call').href = phoneLink;
-  document.getElementById('footer-whatsapp').href = whatsappLink;
-});
 </script>
 </body>
 </html>
