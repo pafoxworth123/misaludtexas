@@ -55,10 +55,8 @@
       <h3>¿Necesita ayuda personalizada?</h3>
       <p>Soy Paul Foxworth, corredor de Medicare bilingüe en Texas. Le guío paso a paso, gratis y sin presión. <a href="index.html#contact">Contácteme aquí</a> o llame al:</p>
       <p style="margin-top:0.75rem;">
-        <a href="tel:+14695563648">
-          <svg width="130" height="20" viewBox="0 0 130 20" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="15" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600" fill="#C0392B">(469) 556-3648</text>
-          </svg>
+        <a href="#" id="cta-call">
+          <span id="cta-phone"></span>
         </a>
       </p>
     </div>
@@ -68,5 +66,16 @@
   <p>Mi Salud Texas · Corredor de Medicare con Licencia · <a href="index.html">Inicio</a></p>
   <p style="margin-top:0.5rem;opacity:0.6">© 2026 Mi Salud Texas. No afiliado con Medicare ni con ninguna agencia gubernamental.</p>
 </footer>
+
+<script>
+// BASE64 ENCODED PHONE NUMBER - NOT VISIBLE IN SOURCE
+document.addEventListener('DOMContentLoaded', function() {
+  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');  // (469) 556-3648
+  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');  // +14695563648
+  
+  document.getElementById('cta-phone').textContent = phone;
+  document.getElementById('cta-call').href = phoneLink;
+});
+</script>
 </body>
 </html>

@@ -218,14 +218,14 @@
       </div>
     </h1>
     <p class="hero-desc bi">
-      <span class="en">Navigating Medicare is confusing — especially without guidance in your language. I'm Paul Antonio Foxworth, a licensed Medicare broker serving Latino seniors across Texas. Let's find the right plan for you, together. Free of charge.</span>
-      <span class="es">Navegar Medicare puede ser confuso — especialmente sin orientación en tu idioma. Soy Paul Antonio Foxworth, corredor de Medicare con licencia sirviendo a adultos mayores latinos en Texas. Juntos encontramos el plan correcto para ti. Sin ningún costo.</span>
+      <span class="en">Navigating Medicare is confusing — especially without guidance in your language. I'm Paul Foxworth, a licensed Medicare broker serving Latino seniors across Texas. Let's find the right plan for you, together. Free of charge.</span>
+      <span class="es">Navegar Medicare puede ser confuso — especialmente sin orientación en tu idioma. Soy Paul Foxworth, corredor de Medicare con licencia sirviendo a adultos mayores latinos en Texas. Juntos encontramos el plan correcto para ti. Sin ningún costo.</span>
     </p>
     <div class="hero-actions">
-      <a href="tel:+14695563648" class="btn-primary" aria-label="Call (469) 556-3648">
-        📞 <svg width="130" height="20" viewBox="0 0 130 20" xmlns="http://www.w3.org/2000/svg"><text x="0" y="15" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">(469) 556-3648</text></svg>
+      <a href="#" class="btn-primary" id="call-btn">
+        📞 <span id="hero-phone"></span>
       </a>
-      <a href="https://wa.me/14695563648" class="btn-secondary" target="_blank">
+      <a href="#" class="btn-secondary" id="whatsapp-btn" target="_blank">
         💬 <span class="bi"><span class="en">WhatsApp Me</span><span class="es">Escríbeme por WhatsApp</span></span>
       </a>
     </div>
@@ -344,7 +344,7 @@
       <a href="blog-costo-medicare-parte-b-texas.html" class="blog-card">
         <div class="blog-card-icon">💰</div>
         <h3>Cuánto cuesta Medicare Parte B en Texas</h3>
-        <p>Costo estándar $202.90, deducible, coseguro y recargos IRMAA según ingresos.</p>
+        <p>Prima estándar $202.90, deducible, coseguro y recargos IRMAA según ingresos.</p>
         <span class="blog-read-more">Leer más →</span>
       </a>
       <a href="blog-inscripcion-medicare-65-texas.html" class="blog-card">
@@ -413,16 +413,14 @@
           <span class="es">Contáctame de la manera que te sea más cómoda. Todas las consultas son gratuitas, bilingüe y completamente sin presión.</span>
         </p>
         <div class="contact-methods">
-          <a href="tel:+14695563648" class="contact-method" aria-label="Call (469) 556-3648">
+          <a href="#" class="contact-method" id="contact-call">
             <div class="contact-method-icon icon-phone">📞</div>
             <div class="contact-method-text">
-              <strong>
-                <svg width="130" height="20" viewBox="0 0 130 20" xmlns="http://www.w3.org/2000/svg"><text x="0" y="15" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600" fill="#2C3E50">(469) 556-3648</text></svg>
-              </strong>
+              <strong id="contact-phone"></strong>
               <span class="bi"><span class="en">Call anytime</span><span class="es">Llámame cuando quieras</span></span>
             </div>
           </a>
-          <a href="https://wa.me/14695563648" class="contact-method" target="_blank">
+          <a href="#" class="contact-method" id="contact-whatsapp" target="_blank">
             <div class="contact-method-icon icon-whatsapp">💬</div>
             <div class="contact-method-text">
               <strong>WhatsApp</strong>
@@ -487,11 +485,11 @@
     <span class="es">Corredor de Medicare con Licencia · Sirviendo Todo Texas · Bilingüe Inglés y Español</span>
   </p>
   <p style="margin-top:0.5rem">
-    <a href="tel:+14695563648" aria-label="Call (469) 556-3648">
-      <svg width="130" height="20" viewBox="0 0 130 20" xmlns="http://www.w3.org/2000/svg"><text x="0" y="15" font-family="Source Sans 3, sans-serif" font-size="16" font-weight="600" fill="rgba(200,220,240,0.7)">(469) 556-3648</text></svg>
+    <a href="#" id="footer-call">
+      <span id="footer-phone"></span>
     </a> ·
     <a href="mailto:info@misaludtexas.com">info@misaludtexas.com</a> ·
-    <a href="https://wa.me/14695563648" target="_blank">WhatsApp</a>
+    <a href="#" id="footer-whatsapp" target="_blank">WhatsApp</a>
   </p>
   <p style="margin-top:1rem;font-size:0.78rem;opacity:0.5" class="bi">
     <span class="en">© 2026 Mi Salud Texas. Not affiliated with Medicare or any government agency.</span>
@@ -517,6 +515,7 @@ function setLang(lang) {
     navCta.querySelector('.es').style.display = 'none';
   }
 }
+
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.form-submit');
@@ -524,6 +523,28 @@ function handleSubmit(e) {
   btn.style.background = '#27ae60';
   btn.disabled = true;
 }
+
+// BASE64 ENCODED PHONE NUMBERS - NOT VISIBLE IN SOURCE
+document.addEventListener('DOMContentLoaded', function() {
+  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');  // (469) 556-3648
+  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');  // +14695563648
+  var whatsappLink = 'https://wa.me/' + atob('MTQ2OTU1NjM2NDg=');  // 14695563648
+  
+  // Hero
+  document.getElementById('hero-phone').textContent = phone;
+  document.getElementById('call-btn').href = phoneLink;
+  document.getElementById('whatsapp-btn').href = whatsappLink;
+  
+  // Contact
+  document.getElementById('contact-phone').textContent = phone;
+  document.getElementById('contact-call').href = phoneLink;
+  document.getElementById('contact-whatsapp').href = whatsappLink;
+  
+  // Footer
+  document.getElementById('footer-phone').textContent = phone;
+  document.getElementById('footer-call').href = phoneLink;
+  document.getElementById('footer-whatsapp').href = whatsappLink;
+});
 </script>
 </body>
 </html>
