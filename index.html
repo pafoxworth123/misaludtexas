@@ -13,7 +13,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Mi Salud Texas | Licensed Medicare Broker | Bilingual</title>
-<meta name="description" content="Licensed Medicare broker serving Latino seniors across Texas. Free consultations in English and Spanish. Tu guía de Medicare en Texas."/>
+<meta name="description" content="Licensed Medicare broker serving Latino seniors across Texas. Free consultations in English and Spanish. Tu guía de Medicare en Texas. Read our blog for Medicare guides."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232C3E50'/><path d='M50 15 L57 38 L82 38 L62 53 L70 77 L50 62 L30 77 L38 53 L18 38 L43 38 Z' fill='white'/><rect x='25' y='80' width='50' height='8' rx='2' fill='%23C0392B'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
@@ -55,8 +56,11 @@
     padding: 0 2rem; display: flex; align-items: center; justify-content: space-between;
     height: 64px; border-bottom: 2px solid var(--red);
   }
-  .nav-brand { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+  .nav-brand { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.4rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
   .nav-brand span { color: var(--red-light); }
+  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+  .nav-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+  .nav-link:hover { color: white; }
   .nav-cta { background: var(--red); color: white; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
   .nav-cta:hover { background: var(--red-light); }
 
@@ -93,6 +97,7 @@
   /* SECTIONS */
   .about { background: var(--white); padding: 5rem 2rem; }
   .services { background: var(--cream); padding: 5rem 2rem; }
+  .blog { background: var(--white); padding: 5rem 2rem; }
   .why { background: var(--charcoal); padding: 5rem 2rem; color: white; }
   .contact { background: var(--white); padding: 5rem 2rem; }
   .section-inner { max-width: 900px; margin: 0 auto; }
@@ -116,6 +121,15 @@
   .service-card h3 { font-family: 'Playfair Display', serif; color: var(--charcoal); font-size: 1.2rem; margin-bottom: 0.3rem; }
   .service-card h3 .es-title { display: block; font-size: 0.85rem; color: var(--red); font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-style: normal; margin-bottom: 0.4rem; }
   .service-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; }
+
+  /* BLOG GRID */
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+  .blog-card { background: var(--cream); border-radius: 8px; padding: 2rem; border: 1px solid rgba(44,62,80,0.12); border-top: 4px solid var(--red); text-decoration: none; color: var(--text-dark); transition: all 0.2s; display: flex; flex-direction: column; }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(44,62,80,0.12); border-top-color: var(--red-light); }
+  .blog-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .blog-card h3 { font-family: 'Playfair Display', serif; color: var(--charcoal); font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .blog-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+  .blog-read-more { color: var(--red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; }
 
   /* WHY GRID */
   .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
@@ -157,13 +171,27 @@
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .hero-trust { gap: 1rem; }
+    .nav-links { display: none; }
   }
 </style>
 </head>
 <body class="bilingual">
 
 <nav>
-  <a href="#" class="nav-brand">Mi Salud <span>Texas</span></a>
+  <a href="#" class="nav-brand">
+    <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="20" fill="#2C3E50"/>
+      <path d="M50 15 L57 38 L82 38 L62 53 L70 77 L50 62 L30 77 L38 53 L18 38 L43 38 Z" fill="white"/>
+      <rect x="25" y="80" width="50" height="8" rx="2" fill="#C0392B"/>
+    </svg>
+    Mi Salud <span>Texas</span>
+  </a>
+  <div class="nav-links">
+    <a href="#about" class="nav-link"><span class="bi"><span class="en">About</span><span class="es">Acerca</span></span></a>
+    <a href="#services" class="nav-link"><span class="bi"><span class="en">Services</span><span class="es">Servicios</span></span></a>
+    <a href="#blog" class="nav-link"><span class="bi"><span class="en">Blog</span><span class="es">Blog</span></span></a>
+    <a href="#why" class="nav-link"><span class="bi"><span class="en">Why Us</span><span class="es">Por Qué</span></span></a>
+  </div>
   <a href="#contact" class="nav-cta">
     <span class="en">Free Consultation</span>
     <span class="es" style="display:none">Consulta Gratis</span>
@@ -191,10 +219,10 @@
       <span class="es">Navegar Medicare puede ser confuso — especialmente sin orientación en tu idioma. Soy Paul Foxworth, corredor de Medicare con licencia sirviendo a adultos mayores latinos en Texas. Juntos encontramos el plan correcto para ti. Sin ningún costo.</span>
     </p>
     <div class="hero-actions">
-      <a href="tel:+14695563648" class="btn-primary">
+      <a href="tel:+19728508399" class="btn-primary">
         📞 <span class="bi"><span class="en">Call Now</span><span class="es">Llámame</span></span>
       </a>
-      <a href="https://wa.me/14695563648" class="btn-secondary" target="_blank">
+      <a href="https://wa.me/19728508399" class="btn-secondary" target="_blank">
         💬 <span class="bi"><span class="en">WhatsApp Me</span><span class="es">Escríbeme por WhatsApp</span></span>
       </a>
     </div>
@@ -298,6 +326,40 @@
   </div>
 </section>
 
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="section-inner">
+    <p class="section-label bi">
+      <span class="en">Latest Articles</span>
+      <span class="es">Últimos Artículos</span>
+    </p>
+    <h2 class="section-title bi">
+      <span class="en">Helpful Resources</span>
+      <span class="es">Recursos Útiles</span>
+    </h2>
+    <div class="blog-grid">
+      <a href="blog-costo-medicare-parte-b-texas.html" class="blog-card">
+        <div class="blog-card-icon">💰</div>
+        <h3>Cuánto cuesta Medicare Parte B en Texas</h3>
+        <p>Prima estándar $202.90, deducible, coseguro y recargos IRMAA según ingresos.</p>
+        <span class="blog-read-more">Leer más →</span>
+      </a>
+      <a href="blog-inscripcion-medicare-65-texas.html" class="blog-card">
+        <div class="blog-card-icon">📝</div>
+        <h3>Cómo inscribirse en Medicare a los 65 en Texas</h3>
+        <p>Periodo de inscripción inicial, inscripción automática y cómo evitar multas.</p>
+        <span class="blog-read-more">Leer más →</span>
+      </a>
+      <a href="blog-medicare-advantage-como-funciona.html" class="blog-card">
+        <div class="blog-card-icon">🏥</div>
+        <h3>Qué es Medicare Advantage y cómo funciona</h3>
+        <p>Red de proveedores, MOOP, beneficios dentales, visión y audición.</p>
+        <span class="blog-read-more">Leer más →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- WHY -->
 <section class="why" id="why">
   <div class="section-inner">
@@ -355,7 +417,7 @@
               <span class="bi"><span class="en">Call anytime</span><span class="es">Llámame cuando quieras</span></span>
             </div>
           </a>
-          <a href="https://wa.me/14695563648" class="contact-method" target="_blank">
+          <a href="https://wa.me/19728508399" class="contact-method" target="_blank">
             <div class="contact-method-icon icon-whatsapp">💬</div>
             <div class="contact-method-text">
               <strong>WhatsApp</strong>
@@ -425,7 +487,7 @@
   <p style="margin-top:0.5rem">
     <a href="tel:+19728508399">(972) 850-8399</a> ·
     <a href="mailto:info@misaludtexas.com">info@misaludtexas.com</a> ·
-    <a href="https://wa.me/14695563648" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/19728508399" target="_blank">WhatsApp</a>
   </p>
   <p style="margin-top:1rem;font-size:0.78rem;opacity:0.5" class="bi">
     <span class="en">© 2026 Mi Salud Texas. Not affiliated with Medicare or any government agency.</span>
