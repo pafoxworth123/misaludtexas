@@ -151,6 +151,8 @@
   .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; color: var(--red); text-transform: uppercase; margin-bottom: 0.75rem; }
   .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--charcoal); margin-bottom: 1.25rem; line-height: 1.2; }
   .why .section-title { color: white; }
+  .section-heading.bi { gap: 1.85rem; margin-bottom: 1.25rem; }
+  .section-heading.bi .section-title { margin-bottom: 0; }
 
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2.5rem; align-items: center; }
   .about-photo-wrap { position: relative; }
@@ -350,11 +352,16 @@
 
 <section class="about" id="about">
   <div class="section-inner">
-    <p class="section-label bi"><span class="en">About</span><span class="es">Acerca de Mí</span></p>
-    <h2 class="section-title bi">
-      <span class="en">A Broker You Can Trust.<br/>In the Language You Prefer.</span>
-      <span class="es">Un Corredor de Confianza.<br/>En el Idioma que Prefieras.</span>
-    </h2>
+    <div class="section-heading bi">
+      <div class="en">
+        <p class="section-label">About</p>
+        <h2 class="section-title">A Broker You Can Trust.<br/>In the Language You Prefer.</h2>
+      </div>
+      <div class="es">
+        <p class="section-label">Acerca de Mí</p>
+        <h2 class="section-title">Un Corredor de Confianza.<br/>En el Idioma que Prefieras.</h2>
+      </div>
+    </div>
     <div class="about-grid">
       <div class="about-photo-wrap">
         <img src="profile2.png" alt="Paul Foxworth — Licensed Medicare Broker, Mi Salud Texas" class="about-photo"/>
@@ -379,11 +386,16 @@
 
 <section class="services" id="services">
   <div class="section-inner">
-    <p class="section-label bi"><span class="en">What I Help With</span><span class="es">Cómo Te Ayudo</span></p>
-    <h2 class="section-title bi">
-      <span class="en">Medicare Can Be Complicated.<br/>I know because I also have Medicare.<br/>I Make It Simple.</span>
-      <span class="es">Medicare Puede Ser Complicado.<br/>Lo se porque yo tambien tengo Medicare. Yo Te Lo Hago Facil.</span>
-    </h2>
+    <div class="section-heading bi">
+      <div class="en">
+        <p class="section-label">What I Help With</p>
+        <h2 class="section-title">Medicare Can Be Complicated.<br/>I know because I also have Medicare.<br/>I Make It Simple.</h2>
+      </div>
+      <div class="es">
+        <p class="section-label">Cómo Te Ayudo</p>
+        <h2 class="section-title">Medicare Puede Ser Complicado.<br/>Lo se porque yo tambien tengo Medicare. Yo Te Lo Hago Facil.</h2>
+      </div>
+    </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🏥</div>
@@ -439,14 +451,16 @@
 
 <section class="blog" id="blog">
   <div class="section-inner">
-    <p class="section-label bi">
-      <span class="en">Latest Articles</span>
-      <span class="es">Últimos Artículos</span>
-    </p>
-    <h2 class="section-title bi">
-      <span class="en">Helpful Resources</span>
-      <span class="es">Recursos Útiles</span>
-    </h2>
+    <div class="section-heading bi">
+      <div class="en">
+        <p class="section-label">Latest Articles</p>
+        <h2 class="section-title">Helpful Resources</h2>
+      </div>
+      <div class="es">
+        <p class="section-label">Últimos Artículos</p>
+        <h2 class="section-title">Recursos Útiles</h2>
+      </div>
+    </div>
     <div class="blog-grid">
       <a href="blog-costo-medicare-parte-b-texas.html" class="blog-card">
         <div class="blog-card-icon">💰</div>
@@ -472,11 +486,16 @@
 
 <section class="benefits" id="benefits">
   <div class="section-inner">
-    <p class="section-label bi"><span class="en">Extra Benefits</span><span class="es">Beneficios Adicionales</span></p>
-    <h2 class="section-title bi">
-      <span class="en">Some Plans Include Benefits<br/>Far Beyond Original Medicare</span>
-      <span class="es">Algunos Planes Incluyen Beneficios<br/>Más Allá del Medicare Original</span>
-    </h2>
+    <div class="section-heading bi">
+      <div class="en">
+        <p class="section-label">Extra Benefits</p>
+        <h2 class="section-title">Some Plans Include Benefits<br/>Far Beyond Original Medicare</h2>
+      </div>
+      <div class="es">
+        <p class="section-label">Beneficios Adicionales</p>
+        <h2 class="section-title">Algunos Planes Incluyen Beneficios<br/>Más Allá del Medicare Original</h2>
+      </div>
+    </div>
     <p class="benefits-intro bi">
       <span class="en">Many Medicare Advantage plans available in Texas now come with extra benefits like these — at $0 or near $0 cost. Whether a plan offers them, and how much, depends on the carrier, the specific plan, and your county.</span>
       <span class="es">Muchos planes de Medicare Advantage disponibles en Texas ahora incluyen beneficios extra como estos — a $0 o casi $0 de costo. Que un plan los ofrezca, y cuánto, depende de la aseguradora, el plan específico y tu condado.</span>
@@ -515,41 +534,33 @@
     </div>
 
     <p class="benefits-disclaimer bi">
-      <span class="en">Benefit amounts shown are examples of what select plans may offer and are not a guarantee of coverage. Not every plan offers every benefit listed, and availability varies by insurance carrier, plan, and service area (county). Benefits, premiums, and copays may change each plan year. I am an independent broker and can check exactly what's available for your ZIP code, at no cost.</span>
-      <span class="es">Los montos mostrados son ejemplos de lo que algunos planes pueden ofrecer y no garantizan cobertura. No todos los planes ofrecen todos los beneficios enumerados, y la disponibilidad varía según la aseguradora, el plan y el área de servicio (condado). Los beneficios, primas y copagos pueden cambiar cada año del plan. Soy un corredor independiente y puedo revisar exactamente qué está disponible para tu código postal, sin ningún costo.</span>
+      <span class="en">Benefit amounts shown are examples of what select plans may offer and are not a guarantee of coverage. Not every plan offers every benefit listed, and availability varies by insurance carrier, plan, and service area (county). Some benefits — including grocery, utility, and wellness allowances — are only available to members who meet plan-specific eligibility criteria, which is confirmed directly by the plan or a healthcare provider, never through this website. Benefits, premiums, and copays may change each plan year. I am an independent broker and can check exactly what's available for your ZIP code, at no cost.</span>
+      <span class="es">Los montos mostrados son ejemplos de lo que algunos planes pueden ofrecer y no garantizan cobertura. No todos los planes ofrecen todos los beneficios enumerados, y la disponibilidad varía según la aseguradora, el plan y el área de servicio (condado). Algunos beneficios — incluyendo los de despensa, servicios y bienestar — solo están disponibles para miembros que cumplen con criterios de elegibilidad específicos del plan, lo cual se confirma directamente con el plan o un proveedor de salud, nunca a través de este sitio web. Los beneficios, primas y copagos pueden cambiar cada año del plan. Soy un corredor independiente y puedo revisar exactamente qué está disponible para tu código postal, sin ningún costo.</span>
     </p>
 
     <div class="benefits-cta">
       <div id="quiz-step-1">
-        <h3 class="bi"><span class="en">Which Benefits Might You Qualify For?</span><span class="es">¿Cuáles Beneficios Podrías Calificar?</span></h3>
-        <p class="bi"><span class="en">Answer one quick question to see your results.</span><span class="es">Responde una pregunta rápida para ver tus resultados.</span></p>
-        <p class="quiz-question bi">
-          <span class="en">Do you currently manage an ongoing health condition — like diabetes, heart disease, COPD, kidney disease, or something similar?</span>
-          <span class="es">¿Actualmente manejas alguna condición de salud continua — como diabetes, enfermedad cardíaca, EPOC, enfermedad renal, o algo similar?</span>
-        </p>
+        <h3 class="bi"><span class="en">Curious What You Might Qualify For?</span><span class="es">¿Tienes Curiosidad de Para Qué Podrías Calificar?</span></h3>
+        <p class="bi"><span class="en">Tell me what interests you most, and I'll check your options — free, no obligation.</span><span class="es">Dime qué te interesa más, y reviso tus opciones — gratis, sin compromiso.</span></p>
         <div class="quiz-options">
-          <button type="button" class="quiz-btn" onclick="showQuizResults('yes')"><span class="bi"><span class="en">Yes</span><span class="es">Sí</span></span></button>
-          <button type="button" class="quiz-btn" onclick="showQuizResults('no')"><span class="bi"><span class="en">No</span><span class="es">No</span></span></button>
-          <button type="button" class="quiz-btn" onclick="showQuizResults('unsure')"><span class="bi"><span class="en">Not Sure</span><span class="es">No Estoy Seguro</span></span></button>
+          <button type="button" class="quiz-btn" onclick="showQuizResults('dental')"><span class="bi"><span class="en">🦷 Dental &amp; OTC</span><span class="es">🦷 Dental y Farmacia</span></span></button>
+          <button type="button" class="quiz-btn" onclick="showQuizResults('everyday')"><span class="bi"><span class="en">🛒 Groceries &amp; Utilities</span><span class="es">🛒 Despensa y Servicios</span></span></button>
+          <button type="button" class="quiz-btn" onclick="showQuizResults('all')"><span class="bi"><span class="en">Not Sure — Show Me Everything</span><span class="es">No Estoy Seguro — Muéstrame Todo</span></span></button>
         </div>
       </div>
 
       <div id="quiz-step-2" style="display:none;">
-        <div id="quiz-result-yes" class="quiz-result" style="display:none;">
-          <p class="quiz-check bi"><span class="en">✓ Dental care and pharmacy (OTC) benefits are included in many plans — I can check what's in yours.</span><span class="es">✓ Los beneficios dentales y de farmacia (OTC) están incluidos en muchos planes — puedo revisar lo que tiene el tuyo.</span></p>
-          <p class="quiz-check quiz-check-highlight bi"><span class="en">✓ Based on your answer, you may also qualify for extra grocery, utility, and wellness benefits through a special program for people managing an ongoing health condition.</span><span class="es">✓ Según tu respuesta, también podrías calificar para beneficios extra de despensa, servicios y bienestar a través de un programa especial para personas que manejan una condición de salud continua.</span></p>
-        </div>
-        <div id="quiz-result-other" class="quiz-result" style="display:none;">
-          <p class="quiz-check bi"><span class="en">✓ Dental care and pharmacy (OTC) benefits are included in many plans — I can check what's in yours.</span><span class="es">✓ Los beneficios dentales y de farmacia (OTC) están incluidos en muchos planes — puedo revisar lo que tiene el tuyo.</span></p>
-          <p class="quiz-check bi"><span class="en">Grocery and utility benefits are usually reserved for people managing an ongoing health condition — but many people qualify without realizing it. I can check for you, free of charge.</span><span class="es">Los beneficios de despensa y servicios generalmente se reservan para personas que manejan una condición de salud continua — pero muchas personas califican sin saberlo. Puedo revisarlo por ti, sin costo.</span></p>
-          <p class="quiz-check quiz-check-highlight bi"><span class="en">✓ Even without a qualifying condition, you may still be eligible for Extra Help — a federal program that lowers or eliminates your Medicare drug plan premiums and copays based on income. It's worth checking either way.</span><span class="es">✓ Incluso sin una condición que califique, podrías ser elegible para Extra Help — un programa federal que reduce o elimina las primas y copagos de tu plan de medicamentos de Medicare según tus ingresos. Vale la pena revisarlo de todas formas.</span></p>
+        <div class="quiz-result">
+          <p class="quiz-check bi"><span class="en">✓ Dental care and pharmacy (OTC) benefits are included in many Medicare Advantage plans — I can check exactly what's in yours.</span><span class="es">✓ Los beneficios dentales y de farmacia (OTC) están incluidos en muchos planes de Medicare Advantage — puedo revisar exactamente lo que tiene el tuyo.</span></p>
+          <p class="quiz-check bi"><span class="en">Some plans also offer extra grocery, utility, and wellness benefits to members who meet the plan's eligibility criteria. That's confirmed directly by the plan or your healthcare provider — never through this website. If it interests you, I'll check at no cost.</span><span class="es">Algunos planes también ofrecen beneficios extra de despensa, servicios y bienestar para miembros que cumplen con los criterios de elegibilidad del plan. Eso se confirma directamente con el plan o tu proveedor de salud — nunca a través de este sitio web. Si te interesa, lo reviso sin costo.</span></p>
+          <p class="quiz-check quiz-check-highlight bi"><span class="en">✓ You may also be eligible for Extra Help — a federal program that lowers or eliminates your Medicare drug plan premiums and copays based on income.</span><span class="es">✓ También podrías ser elegible para Extra Help — un programa federal que reduce o elimina las primas y copagos de tu plan de medicamentos de Medicare según tus ingresos.</span></p>
         </div>
 
         <p class="bi" style="margin-top:1.25rem;"><span class="en">Leave your info and I'll confirm exactly what you qualify for — free, no obligation.</span><span class="es">Déjame tu información y confirmo exactamente para qué calificas — gratis, sin compromiso.</span></p>
         <form class="benefits-form" action="https://formspree.io/f/mnnzznbv" method="POST" onsubmit="handleSubmit(event)">
           <input type="hidden" name="form_name" value="Benefits Eligibility Quiz"/>
           <input type="hidden" name="lead_source" value="Benefits Section Quiz"/>
-          <input type="hidden" name="quiz_answer" id="quiz-answer-field" value=""/>
+          <input type="hidden" name="benefit_interest" id="quiz-answer-field" value=""/>
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
           <div class="form-row">
             <div class="form-group">
@@ -582,13 +593,16 @@
 
 <section class="why" id="why">
   <div class="section-inner">
-    <p class="section-label" style="color:rgba(255,120,100,0.8)" >
-      <span class="bi"><span class="en">Why Mi Salud Texas</span><span class="es">Por Qué Mi Salud Texas</span></span>
-    </p>
-    <h2 class="section-title bi">
-      <span class="en">The Latino Medicare Market<br/>Deserves Better.</span>
-      <span class="es">La Comunidad Latina Merece<br/>Mejor Orientación.</span>
-    </h2>
+    <div class="section-heading bi">
+      <div class="en">
+        <p class="section-label" style="color:rgba(255,120,100,0.8)">Why Mi Salud Texas</p>
+        <h2 class="section-title">The Latino Medicare Market<br/>Deserves Better.</h2>
+      </div>
+      <div class="es">
+        <p class="section-label" style="color:rgba(255,120,100,0.8)">Por Qué Mi Salud Texas</p>
+        <h2 class="section-title">La Comunidad Latina Merece<br/>Mejor Orientación.</h2>
+      </div>
+    </div>
     <div class="why-grid">
       <div class="why-item">
         <span class="why-num">70%</span>
@@ -616,11 +630,16 @@
 
 <section class="contact" id="contact">
   <div class="section-inner">
-    <p class="section-label bi"><span class="en">Get In Touch</span><span class="es">Contáctame</span></p>
-    <h2 class="section-title bi">
-      <span class="en">Ready to Find Your Perfect<br/>Medicare Plan?</span>
-      <span class="es">¿Listo para Encontrar tu<br/>Plan de Medicare Ideal?</span>
-    </h2>
+    <div class="section-heading bi">
+      <div class="en">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Ready to Find Your Perfect<br/>Medicare Plan?</h2>
+      </div>
+      <div class="es">
+        <p class="section-label">Contáctame</p>
+        <h2 class="section-title">¿Listo para Encontrar tu<br/>Plan de Medicare Ideal?</h2>
+      </div>
+    </div>
     <div class="contact-grid">
       <div>
         <p style="color:var(--text-mid);line-height:1.7;margin-bottom:1.75rem" class="bi">
@@ -652,8 +671,7 @@
         </div>
       </div>
       <div>
-        <form class="contact-form" action="https://formspree.io/f/mnnzznbv
-		" method="POST" onsubmit="handleSubmit(event)">
+        <form class="contact-form" action="https://formspree.io/f/mnnzznbv" method="POST" onsubmit="handleSubmit(event)">
           <input type="hidden" name="form_name" value="Main Contact Form"/>
           <input type="hidden" name="lead_source" id="contact-lead-source" value="Direct / Scrolled to Form"/>
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
@@ -804,15 +822,14 @@ async function handleSubmit(e) {
   }
 }
 
-// ----- Benefits eligibility quiz -----
-function showQuizResults(answer) {
+// ----- Benefits interest quiz (no health data collected — interest only) -----
+function showQuizResults(interest) {
   document.getElementById('quiz-step-1').style.display = 'none';
   document.getElementById('quiz-step-2').style.display = 'block';
-  document.getElementById('quiz-result-yes').style.display = (answer === 'yes') ? 'block' : 'none';
-  document.getElementById('quiz-result-other').style.display = (answer !== 'yes') ? 'block' : 'none';
   var field = document.getElementById('quiz-answer-field');
-  if (field) { field.value = answer; }
+  if (field) { field.value = interest; }
 }
+
 
 // ----- AEP countdown banner -----
 (function () {
