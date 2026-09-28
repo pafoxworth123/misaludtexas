@@ -230,7 +230,7 @@
       <p class="lead"><span class="en">I'm Paul Antonio Foxworth, a licensed broker serving Latino seniors across Texas. Free, bilingual, and without pressure.</span><span class="es">Soy Paul Antonio Foxworth, corredor con licencia sirviendo a adultos mayores latinos en Texas. Gratis, bilingüe y sin presión.</span></p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact"><span class="en">Request a Free Consultation</span><span class="es">Solicita una Consulta Gratis</span></a>
-        <a class="btn btn-outline" href="tel:+14695563648">📞 <span class="en">Call Now</span><span class="es">Llamar Ahora</span></a>
+        <a class="btn btn-outline js-call" href="#"><span aria-hidden="true">📞</span> <span class="en">Call Now</span><span class="es">Llamar Ahora</span></a>
       </div>
     </div>
   </div>
@@ -395,7 +395,7 @@
       <span class="kicker"><span class="en">Get In Touch</span><span class="es">Contáctame</span></span>
       <h2><span class="en">Ready to find your perfect Medicare plan?</span><span class="es">¿Listo para encontrar tu plan de Medicare ideal?</span></h2>
       <p><span class="en">All consultations are free, bilingual, and without pressure.</span><span class="es">Todas las consultas son gratuitas, bilingües y sin presión.</span></p>
-      <p class="big">📞 (469) 556-3648</p>
+      <p class="big"><span aria-hidden="true">📞</span> <a class="js-call js-call-text" href="#" style="text-decoration:none;color:inherit"></a></p>
       <p><span class="en">Please feel free to text or WhatsApp me.</span><span class="es">Escríbeme por mensaje de texto o WhatsApp.</span></p>
     </div>
     <form id="lead-form" novalidate>
@@ -436,8 +436,8 @@
 </footer>
 
 <div class="sticky-bar">
-  <a href="tel:+14695563648">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
-  <a href="#" onclick="return false;">💬 WhatsApp</a>
+  <a href="#" class="js-call">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
+  <a href="#" class="js-whatsapp">💬 WhatsApp</a>
   <a href="#contact"><span class="en">Free Consultation</span><span class="es">Consulta Gratis</span></a>
 </div>
 
@@ -453,6 +453,28 @@
 </div>
 
 <script>
+/* ===== Phone number obfuscation =====
+   The real number never appears as plain text in the HTML source.
+   Digits are stored as char codes and assembled at runtime.
+   To change the number: update BOTH arrays below.
+   - TEL_E164: digits only (country code + number), for the tel: link
+   - TEL_DISPLAY: formatted display, for on-page text */
+var TEL_E164 = [49,52,54,57,53,53,54,51,54,52,56]; /* 14695563648 */
+var TEL_DISPLAY = [40,52,54,57,41,32,53,53,54,45,51,54,52,56]; /* (469) 556-3648 */
+
+function decodeCodes(arr){return arr.map(function(c){return String.fromCharCode(c);}).join('');}
+
+(function wirePhone(){
+  var href='tel:+'+decodeCodes(TEL_E164);
+  var text=decodeCodes(TEL_DISPLAY);
+  document.querySelectorAll('.js-call').forEach(function(a){a.setAttribute('href',href);});
+  document.querySelectorAll('.js-call-text').forEach(function(a){a.textContent=text;});
+  /* WhatsApp uses the same digits */
+  var wa='https://wa.me/'+decodeCodes(TEL_E164);
+  document.querySelectorAll('.js-whatsapp').forEach(function(a){a.setAttribute('href',wa);a.setAttribute('target','_blank');a.setAttribute('rel','noopener');});
+})();
+
+/* ===== Language toggle ===== */
 function setLang(l){
   document.documentElement.setAttribute('data-lang', l);
   document.documentElement.setAttribute('lang', l);
@@ -465,6 +487,7 @@ try{
   if(saved) setLang(saved);
 }catch(e){}
 
+/* ===== Hero carousel ===== */
 var heroI=0,heroSlides=document.querySelectorAll('.slide');
 function heroGo(d){
   heroSlides[heroI].classList.remove('active');
