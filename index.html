@@ -1,881 +1,515 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-lang="es">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R4K3GFSDMK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-R4K3GFSDMK');
-</script>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Mi Salud Texas | Bilingual Medicare Broker | Dental, Groceries & More</title>
-<meta name="description" content="Licensed bilingual Medicare broker serving Latino seniors across Texas and I am also a Medicare Client, just like you. Compare Medicare Advantage plans with dental, over-the-counter, grocery, and utility benefits. Free consultations in English and Spanish. Corredor de Medicare bilingüe en Texas."/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://misaludtexas.com/"/>
-<meta name="theme-color" content="#2C3E50"/>
-
-<!-- Open Graph -->
-<meta property="og:type" content="website"/>
-<meta property="og:site_name" content="Mi Salud Texas"/>
-<meta property="og:title" content="Mi Salud Texas | Corredor de Medicare Bilingüe en Texas, y Yo Tambien tengo Medicare...como tu"/>
-<meta property="og:description" content="Compara planes de Medicare Advantage con beneficios dentales, despensa, servicios y más. Consultas gratis en inglés y español."/>
-<meta property="og:url" content="https://misaludtexas.com/"/>
-<meta property="og:image" content="https://misaludtexas.com/og-image.jpg"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:locale" content="es_US"/>
-<meta property="og:locale:alternate" content="en_US"/>
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Mi Salud Texas | Bilingual Medicare Broker in Texas"/>
-<meta name="twitter:description" content="Free bilingual Medicare guidance. Compare plans with dental, grocery, OTC and utility benefits across Texas."/>
-<meta name="twitter:image" content="https://misaludtexas.com/og-image.jpg"/>
-
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232C3E50'/><path d='M50 15 L57 38 L82 38 L62 53 L70 77 L50 62 L30 77 L38 53 L18 38 L43 38 Z' fill='white'/><rect x='25' y='80' width='50' height='8' rx='2' fill='%23C0392B'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "InsuranceAgency",
-  "name": "Mi Salud Texas",
-  "description": "Licensed bilingual Medicare broker serving Latino seniors across Texas. Free plan comparisons in English and Spanish.",
-  "url": "https://misaludtexas.com/",
-  "areaServed": { "@type": "State", "name": "Texas" },
-  "knowsLanguage": ["en", "es"],
-  "founder": { "@type": "Person", "name": "Paul Antonio Foxworth" },
-  "priceRange": "Free"
-}
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mi Salud Texas | Corredor de Medicare Bilingüe en Texas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --charcoal: #2C3E50;
-    --charcoal-dark: #1a252f;
-    --charcoal-mid: #34495e;
-    --red: #C0392B;
-    --red-light: #e74c3c;
-    --cream: #FAF8F5;
-    --white: #ffffff;
-    --text-dark: #1a1a2e;
-    --text-mid: #4a4a6a;
-    --text-light: #8888aa;
-    --green-check: #27ae60;
+  :root{
+    --ink:#1B2A3D;
+    --paper:#FAF3E7;
+    --paper-2:#F1E7D4;
+    --marigold:#D97F1E;
+    --marigold-deep:#B8650F;
+    --teal:#2F6E68;
+    --charcoal:#2A2620;
+    --line:#DCCFB4;
+    --paper-dark-bg:#12202c;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
-
-  .lang-toggle {
-    position: fixed; top: 112px; right: 1.5rem; z-index: 99;
-    display: flex; background: rgba(44,62,80,0.95); border-radius: 20px;
-    overflow: hidden; border: 1px solid rgba(255,255,255,0.15);
-    transition: top 0.2s ease;
+  *,*::before,*::after{box-sizing:inherit}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{
+    margin:0;background:var(--paper);color:var(--charcoal);
+    font-family:'Inter',system-ui,sans-serif;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
   }
-  body.no-aep-banner .lang-toggle { top: 72px; }
-  body.no-aep-banner .hero { padding-top: 100px; }
-  .lang-btn {
-    padding: 0.3rem 0.9rem; font-size: 0.8rem; font-weight: 600;
-    cursor: pointer; border: none; background: transparent;
-    color: rgba(255,255,255,0.5); transition: all 0.2s; font-family: 'Source Sans 3', sans-serif;
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--ink);margin:0 0 .4em;font-weight:600;line-height:1.08}
+  p{margin:0 0 1em;max-width:62ch}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  [data-lang="en"] .es{display:none}
+  [data-lang="es"] .en{display:none}
+  button{font:inherit;cursor:pointer}
+
+  /* ---- header ---- */
+  header{position:sticky;top:0;z-index:40;background:rgba(250,243,231,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;gap:16px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .brand span{color:var(--marigold-deep)}
+  nav.links{display:flex;gap:26px;font-size:.95rem}
+  nav.links a{text-decoration:none;color:var(--charcoal);opacity:.85}
+  nav.links a:hover{opacity:1}
+  .nav-actions{display:flex;align-items:center;gap:14px}
+  .lang-toggle{border:1px solid var(--ink);background:none;border-radius:20px;padding:5px 4px;display:flex;font-size:.78rem;font-weight:600}
+  .lang-toggle button{border:none;background:none;padding:4px 10px;border-radius:16px;color:var(--ink)}
+  .lang-toggle button.active{background:var(--ink);color:var(--paper)}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;padding:11px 22px;border-radius:3px;border:1px solid transparent;font-size:.95rem}
+  .btn-primary{background:var(--marigold);color:#211703}
+  .btn-primary:hover{background:var(--marigold-deep);color:#fff}
+  .btn-outline{border-color:var(--ink);color:var(--ink)}
+  .menu-btn{display:none;background:none;border:none;font-size:1.5rem;color:var(--ink)}
+
+  /* ---- hero ---- */
+  .hero{padding:64px 0 40px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .eyebrow-line{display:flex;align-items:center;gap:10px;color:var(--teal);font-weight:600;font-size:.9rem;margin-bottom:18px}
+  .eyebrow-line::before{content:"";width:28px;height:2px;background:var(--teal)}
+  .hero h1{font-size:clamp(2.1rem,4vw,3.1rem);max-width:14ch}
+  .hero p.lead{font-size:1.08rem;max-width:46ch;color:#3c362d}
+  .trust-list{list-style:none;padding:0;margin:22px 0 28px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.92rem}
+  .trust-list li::before{content:"✓ ";color:var(--teal);font-weight:700}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+  .video-frame{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 18px 40px -18px rgba(27,42,61,.45)}
+  .video-frame video, .video-placeholder{width:100%;height:100%;object-fit:cover;display:block}
+  .video-placeholder{
+    background:
+      linear-gradient(160deg,rgba(27,42,61,.55),rgba(47,110,104,.35)),
+      linear-gradient(120deg,#e7c896,#2F6E68 55%,#1B2A3D);
+    background-size:220% 220%;
+    animation:panGradient 14s ease-in-out infinite alternate;
   }
-  .lang-btn.active { background: var(--red); color: white; border-radius: 20px; }
+  @keyframes panGradient{0%{background-position:0% 30%}100%{background-position:100% 70%}}
+  .video-frame figcaption{position:absolute;left:18px;bottom:16px;color:#fff;font-size:.85rem;background:rgba(20,25,20,.35);padding:6px 12px;border-radius:20px;backdrop-filter:blur(2px)}
+  .video-note{position:absolute;top:12px;right:12px;font-size:.68rem;letter-spacing:.03em;color:#fff;background:rgba(0,0,0,.4);padding:4px 9px;border-radius:20px}
 
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(44,62,80,0.97); backdrop-filter: blur(10px);
-    padding: 0 2rem; display: flex; align-items: center; justify-content: space-between;
-    height: 64px; border-bottom: 2px solid var(--red);
-  }
-  .aep-banner {
-    position: fixed; top: 64px; left: 0; right: 0; z-index: 97;
-    background: linear-gradient(90deg, var(--red), var(--red-light));
-    color: white; text-align: center; padding: 0.55rem 2.5rem;
-    font-size: 0.85rem; font-weight: 600; line-height: 1.4;
-  }
-  .aep-banner a { color: white; text-decoration: underline; }
-  .aep-close { position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(255,255,255,0.85); font-size: 1.1rem; cursor: pointer; line-height: 1; padding: 0.25rem; }
-  .aep-close:hover { color: white; }
-  .nav-brand { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.4rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-  .nav-brand span { color: var(--red-light); }
-  .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-  .nav-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-  .nav-link:hover { color: white; }
-  .nav-cta { background: var(--red); color: white; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
-  .nav-cta:hover { background: var(--red-light); }
 
-  .bi { display: flex; flex-direction: column; gap: 0.15rem; }
-  .bi .en { color: inherit; }
-  .bi .es { 
-    color: inherit; 
-    font-style: normal; 
-    font-size: 1.05em;
-    opacity: 0.85;
-  }
-  body.spanish .bi .en { display: none; }
-  body.spanish .bi .es { opacity: 1; font-style: normal; font-size: 1.05em; }
-  body.english .bi .es { display: none; }
+  /* ---- full-bleed video hero (2 slides) ---- */
+  .hero-bg{position:relative;min-height:min(80vh,700px);color:#fff;overflow:hidden;padding:0;background:var(--ink)}
+  .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s;display:flex;align-items:center}
+  .slide.active{opacity:1;visibility:visible}
+  .slide video,.slide .video-placeholder{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .slide .video-placeholder.alt{background:linear-gradient(160deg,rgba(27,42,61,.5),rgba(217,127,30,.25)),linear-gradient(120deg,#1B2A3D,#2F6E68 45%,#e7b46a);background-size:220% 220%}
+  .slide::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,24,34,.78) 0%,rgba(14,24,34,.4) 55%,rgba(14,24,34,.1) 100%)}
+  .slide .content{position:relative;z-index:2;width:100%;padding-top:40px;padding-bottom:70px}
+  .hero-bg h1{color:#fff;font-size:clamp(2.2rem,5vw,3.8rem);max-width:15ch;margin-bottom:.35em}
+  .hero-bg p.lead{color:#F3ECDD;font-size:1.12rem;max-width:44ch;margin-bottom:26px}
+  .hero-bg .eyebrow-line{color:#F0B15E}
+  .hero-bg .eyebrow-line::before{background:#F0B15E}
+  .hero-bg .btn-outline{border-color:#fff;color:#fff}
+  .hero-bg .video-note{z-index:3}
+  .hero-controls{position:absolute;right:24px;bottom:22px;z-index:4;display:flex;gap:10px;align-items:center}
+  .hero-controls button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(14,24,34,.4);color:#fff;font-size:1.1rem}
+  .hero-controls button:hover{background:var(--marigold);border-color:var(--marigold);color:#211703}
+  .hero-controls button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 50%, var(--charcoal-mid) 100%);
-    display: flex; align-items: center; padding: 148px 2rem 60px; position: relative; overflow: hidden;
-    transition: padding-top 0.2s ease;
-  }
-  .hero::before { content: '★'; position: absolute; font-size: 400px; color: rgba(255,255,255,0.03); right: -60px; top: 50%; transform: translateY(-50%); font-family: serif; pointer-events: none; }
-  .hero::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--red); }
-  .hero-inner { max-width: 900px; margin: 0 auto; width: 100%; }
-  .hero-badge { display: inline-block; background: rgba(192,57,43,0.2); border: 1px solid rgba(192,57,43,0.5); color: #ff8a80; padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.5rem; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5rem); color: var(--white); line-height: 1.1; margin-bottom: 1rem; }
-  .hero h1 span { color: var(--red-light); }
-  .hero-desc { font-size: 1.1rem; color: rgba(200,215,230,0.8); max-width: 640px; line-height: 1.75; margin-bottom: 2.5rem; }
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary { background: var(--red); color: white; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-  .btn-primary:hover { background: var(--red-light); transform: translateY(-2px); }
-  .btn-secondary { background: transparent; color: white; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 1.5px solid rgba(255,255,255,0.4); transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; }
-  .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
-  .hero-trust { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-  .hero-trust-item { display: flex; align-items: center; gap: 0.5rem; color: rgba(200,220,240,0.8); font-size: 0.95rem; }
-  .hero-trust-item .check { color: var(--green-check); font-size: 1.1rem; }
+  /* ---- carrier strip ---- */
+  .carriers{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2)}
+  .carriers .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:26px 40px;padding:22px 24px;justify-content:center}
+  .carriers span.label{font-size:.8rem;color:#6b5f47;font-weight:600}
+  .carriers .names{display:flex;flex-wrap:wrap;gap:22px 34px;font-family:'Fraunces',serif;font-weight:500;color:#4a4030;font-size:1.02rem}
 
-  .about { background: var(--white); padding: 5rem 2rem; }
-  .services { background: var(--cream); padding: 5rem 2rem; }
-  .blog { background: var(--white); padding: 5rem 2rem; }
-  .why { background: var(--charcoal); padding: 5rem 2rem; color: white; }
-  .contact { background: var(--white); padding: 5rem 2rem; }
-  .section-inner { max-width: 900px; margin: 0 auto; }
-  .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; color: var(--red); text-transform: uppercase; margin-bottom: 0.75rem; }
-  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--charcoal); margin-bottom: 1.25rem; line-height: 1.2; }
-  .why .section-title { color: white; }
-  .section-heading.bi { gap: 1.85rem; margin-bottom: 1.25rem; }
-  .section-heading.bi .section-title { margin-bottom: 0; }
+  /* ---- section basics ---- */
+  section{padding:80px 0}
+  .section-head{max-width:56ch;margin-bottom:44px}
+  .kicker{color:var(--marigold-deep);font-weight:600;font-size:.9rem;margin-bottom:8px;display:block}
 
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2.5rem; align-items: center; }
-  .about-photo-wrap { position: relative; }
-  .about-photo-wrap::before { content: ''; position: absolute; top: -12px; left: -12px; right: 12px; bottom: 12px; border: 3px solid var(--red); border-radius: 4px; z-index: 0; }
-  .about-photo { width: 100%; border-radius: 4px; display: block; position: relative; z-index: 1; object-fit: cover; }
-  .about-text p { color: var(--text-mid); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1rem; }
-  .about-text strong { color: var(--charcoal); }
+  /* ---- about / meet agent ---- */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .about-grid .video-frame{aspect-ratio:1/1}
+  blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:var(--ink);border-left:3px solid var(--marigold);padding-left:18px;margin:24px 0}
 
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-  .service-card { background: var(--white); border-radius: 8px; padding: 2rem; border: 1px solid rgba(44,62,80,0.1); border-top: 4px solid var(--red); transition: transform 0.2s, box-shadow 0.2s; }
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(44,62,80,0.12); }
-  .service-icon { font-size: 2.2rem; margin-bottom: 1rem; }
-  .service-card h3 { font-family: 'Playfair Display', serif; color: var(--charcoal); font-size: 1.2rem; margin-bottom: 0.3rem; }
-  .service-card h3 .es-title { display: block; font-size: 0.85rem; color: var(--red); font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-style: normal; margin-bottom: 0.4rem; }
-  .service-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; }
+  /* ---- services: horizontal list, not card grid ---- */
+  .service-list{border-top:1px solid var(--line)}
+  .service-row{display:grid;grid-template-columns:64px 1fr 160px;gap:24px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line)}
+  .service-row .icon{font-size:1.9rem;line-height:1}
+  .service-row h3{font-size:1.15rem;margin-bottom:6px}
+  .service-row p{margin:0;color:#4a4030;font-size:.98rem}
+  .service-row a{align-self:center;text-decoration:none;color:var(--teal);font-weight:600;font-size:.92rem;white-space:nowrap}
+  @media (max-width:640px){.service-row{grid-template-columns:44px 1fr}.service-row a{grid-column:2}}
 
-  .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-  .blog-card { background: var(--cream); border-radius: 8px; padding: 2rem; border: 1px solid rgba(44,62,80,0.12); border-top: 4px solid var(--red); text-decoration: none; color: var(--text-dark); transition: all 0.2s; display: flex; flex-direction: column; }
-  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(44,62,80,0.12); border-top-color: var(--red-light); }
-  .blog-card-icon { font-size: 2rem; margin-bottom: 1rem; }
-  .blog-card h3 { font-family: 'Playfair Display', serif; color: var(--charcoal); font-size: 1.2rem; margin-bottom: 0.5rem; }
-  .blog-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
-  .blog-read-more { color: var(--red); font-weight: 600; font-size: 0.9rem; margin-top: 1rem; }
+  /* ---- benefits ---- */
+  .benefits{background:var(--ink);color:#EDE6D8}
+  .benefits h2{color:#fff}
+  .benefits .kicker{color:#F0B15E}
+  .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15);margin-top:36px}
+  .benefit-col{background:#182635;padding:26px 24px}
+  .benefit-col h3{color:#fff;font-size:1.05rem}
+  .benefit-col ul{list-style:none;margin:14px 0 0;padding:0;font-size:.92rem}
+  .benefit-col li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid rgba(255,255,255,.1)}
+  .benefit-col li:first-child{border-top:none}
+  .benefit-col .amt{color:#F0B15E;font-weight:700;white-space:nowrap}
+  .benefits-fine{font-size:.82rem;color:#B9C2CB;max-width:70ch;margin-top:22px}
+  @media (max-width:800px){.benefit-grid{grid-template-columns:1fr}}
 
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
-  .why-item { text-align: center; }
-  .why-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--red-light); display: block; margin-bottom: 0.5rem; }
-  .why-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
-  .why-item p { font-size: 0.9rem; color: rgba(200,220,240,0.7); line-height: 1.5; }
+  /* ---- testimonial / stats ---- */
+  .proof{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .stat-row{display:flex;flex-wrap:wrap;gap:36px;margin-top:8px}
+  .stat{min-width:120px}
+  .stat .num{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--marigold-deep);display:block}
+  .stat .lbl{font-size:.86rem;color:#4a4030}
+  .quote-frame .video-frame{aspect-ratio:16/10}
 
-  /* Trust strip */
-  .trust-strip { background: var(--white); padding: 1.5rem 2rem; border-bottom: 1px solid rgba(44,62,80,0.08); }
-  .trust-strip-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-  .trust-strip-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; color: var(--text-light); margin-bottom: 0.85rem; }
-  .trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1rem; }
-  .trust-badge { font-size: 0.85rem; font-weight: 600; color: var(--charcoal); background: var(--cream); border: 1px solid rgba(44,62,80,0.12); padding: 0.4rem 0.9rem; border-radius: 4px; }
+  /* ---- contact ---- */
+  .contact{background:var(--paper-2)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  form{display:grid;gap:14px}
+  form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:3px;background:#fff;width:100%}
+  label{font-size:.85rem;font-weight:600;color:#4a4030;display:block;margin-bottom:5px}
+  .contact-info p{font-size:.98rem}
+  .contact-info .big{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--ink)}
 
-  /* Benefits section */
-  .benefits { background: var(--cream); padding: 5rem 2rem; }
-  .benefits-intro { color: var(--text-mid); line-height: 1.75; font-size: 1.05rem; max-width: 700px; margin-top: 1.25rem; }
-  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-  .benefit-card { background: var(--white); border-radius: 8px; padding: 2rem; border: 1px solid rgba(44,62,80,0.1); border-top: 4px solid var(--red); }
-  .benefit-card-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
-  .benefit-card h3 { font-family: 'Playfair Display', serif; color: var(--charcoal); font-size: 1.25rem; margin-bottom: 0.3rem; }
-  .benefit-card h3 .es-title { display: block; font-size: 0.85rem; color: var(--red); font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-style: normal; margin-bottom: 0.4rem; }
-  .benefit-list { list-style: none; margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.65rem; }
-  .benefit-list li { display: flex; align-items: baseline; gap: 0.6rem; font-size: 0.95rem; color: var(--text-mid); line-height: 1.5; }
-  .benefit-list .amount { flex-shrink: 0; font-weight: 700; color: var(--charcoal); background: rgba(192,57,43,0.08); padding: 0.15rem 0.6rem; border-radius: 20px; font-size: 0.85rem; white-space: nowrap; }
-  .benefits-disclaimer { margin-top: 2rem; font-size: 0.82rem; color: var(--text-light); line-height: 1.6; max-width: 760px; font-style: italic; }
-  .benefits-cta { margin-top: 2.5rem; background: var(--white); border: 1.5px solid rgba(192,57,43,0.25); border-radius: 8px; padding: 2rem; max-width: 620px; }
-  .benefits-cta h3 { font-family: 'Playfair Display', serif; color: var(--charcoal); font-size: 1.3rem; margin-bottom: 0.4rem; }
-  .benefits-cta > p.bi { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 1.25rem; }
-  .quiz-question { font-weight: 600; color: var(--charcoal); margin: 1.25rem 0 1rem; line-height: 1.5; }
-  .quiz-options { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-  .quiz-btn { background: var(--cream); border: 1.5px solid rgba(44,62,80,0.2); color: var(--charcoal); font-weight: 600; padding: 0.65rem 1.5rem; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 0.95rem; transition: all 0.15s ease; }
-  .quiz-btn:hover { background: var(--red); border-color: var(--red); color: white; }
-  .quiz-result { background: var(--cream); border-radius: 6px; padding: 1.25rem; margin-bottom: 0.75rem; }
-  .quiz-check { font-size: 0.92rem; color: var(--text-mid); line-height: 1.6; margin-bottom: 0.75rem; }
-  .quiz-check:last-child { margin-bottom: 0; }
-  .quiz-check-highlight { color: var(--charcoal); font-weight: 600; background: rgba(192,57,43,0.08); padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--red); }
-  .quiz-restart { background: none; border: none; color: var(--text-light); font-size: 0.82rem; text-decoration: underline; cursor: pointer; margin-top: 0.5rem; padding: 0; font-family: inherit; }
-  .benefits-form { display: flex; flex-direction: column; gap: 0.85rem; }
-  .benefits-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
 
-  /* Sticky mobile CTA bar */
-  .mobile-cta-bar { display: none; }
-  @media (max-width: 680px) {
-    .mobile-cta-bar {
-      display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 98;
-      border-top: 2px solid var(--red); background: var(--charcoal-dark);
-    }
-    .mobile-cta-bar a {
-      flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.4rem;
-      padding: 0.9rem 0.5rem; color: white; text-decoration: none; font-weight: 600; font-size: 0.9rem;
-    }
-    .mobile-cta-bar a:first-child { background: var(--red); }
-    body { padding-bottom: 58px; }
+  /* ---- form status + AEP modal ---- */
+  .form-status{font-size:.92rem;padding:12px 14px;border-radius:3px;display:none}
+  .form-status.ok{display:block;background:#E1F0EC;color:#1d4d48;border:1px solid #9CC9C1}
+  .form-status.err{display:block;background:#FBE9E4;color:#7a2a16;border:1px solid #E8B4A5}
+  .consent{font-size:.78rem;color:#6b5f47;line-height:1.5;margin:0}
+  .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+  .modal-back{position:fixed;inset:0;z-index:100;background:rgba(14,24,34,.6);display:none;align-items:center;justify-content:center;padding:20px}
+  .modal-back.open{display:flex}
+  .modal{background:var(--paper);max-width:440px;width:100%;padding:32px 28px 26px;border-radius:4px;position:relative;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)}
+  .modal h3{font-size:1.5rem}
+  .modal .x{position:absolute;top:10px;right:12px;background:none;border:none;font-size:1.6rem;color:var(--ink);line-height:1}
+  .modal .btn{width:100%;justify-content:center;margin-top:10px}
+
+  /* ---- footer ---- */
+  footer{background:var(--ink);color:#B9C2CB;padding:48px 0 110px;font-size:.85rem}
+  footer .wrap{display:flex;flex-direction:column;gap:14px}
+  footer a{color:#EDE6D8;text-decoration:underline}
+  .legal{max-width:90ch;color:#8C97A1;line-height:1.6}
+
+  /* ---- sticky contact bar ---- */
+  .sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);display:flex;padding-bottom:env(safe-area-inset-bottom,0px)}
+  .sticky-bar a{flex:1;text-align:center;padding:14px 8px;color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;border-right:1px solid rgba(255,255,255,.15)}
+  .sticky-bar a:last-child{border-right:none;background:var(--marigold);color:#211703}
+
+  @media (max-width:900px){
+    .hero-grid,.about-grid,.proof,.contact-grid{grid-template-columns:1fr}
+    .about-grid{gap:36px}
+    .about-grid .video-frame{order:-1;max-width:360px}
+    nav.links{display:none}
+    .menu-btn{display:block}
   }
 
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2.5rem; align-items: start; }
-  .contact-methods { display: flex; flex-direction: column; gap: 1.25rem; }
-  .contact-method { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid rgba(44,62,80,0.12); text-decoration: none; color: var(--text-dark); transition: all 0.2s; background: var(--cream); }
-  .contact-method:hover { border-color: var(--red); background: white; transform: translateX(4px); }
-  .contact-method-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
-  .icon-phone { background: rgba(192,57,43,0.1); }
-  .icon-whatsapp { background: rgba(39,174,96,0.1); }
-  .icon-email { background: rgba(44,62,80,0.1); }
-  .contact-method-text strong { display: block; font-weight: 600; font-size: 1rem; color: var(--charcoal); }
-  .contact-method-text span { font-size: 0.85rem; color: var(--text-light); }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--charcoal); }
-  .form-group input, .form-group select, .form-group textarea { padding: 0.75rem 1rem; border: 1.5px solid rgba(44,62,80,0.2); border-radius: 4px; font-family: 'Source Sans 3', sans-serif; font-size: 0.95rem; color: var(--text-dark); background: var(--cream); transition: border-color 0.2s; outline: none; }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--red); background: white; }
-  .form-group textarea { resize: vertical; min-height: 100px; }
-  .form-submit { background: var(--red); color: white; border: none; padding: 1rem 2rem; border-radius: 4px; font-family: 'Source Sans 3', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
-  .form-submit:hover { background: var(--red-light); }
-  .form-note { font-size: 0.8rem; color: var(--text-light); text-align: center; }
-
-  footer { background: var(--charcoal-dark); color: rgba(200,220,240,0.7); padding: 2.5rem 2rem; text-align: center; border-top: 3px solid var(--red); }
-  footer .brand { font-family: 'Playfair Display', serif; color: white; font-size: 1.3rem; margin-bottom: 0.5rem; }
-  footer p { font-size: 0.85rem; line-height: 1.7; }
-  footer a { color: rgba(200,220,240,0.7); text-decoration: none; }
-  footer a:hover { color: white; }
-
-  @media (max-width: 680px) {
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .hero-trust { gap: 1rem; }
-    .aep-banner { padding: 0.5rem 2.25rem; font-size: 0.78rem; }
-    .lang-toggle { top: 126px; }
-    body.no-aep-banner .lang-toggle { top: 72px; }
-    .hero { padding-top: 162px; }
-    body.no-aep-banner .hero { padding-top: 100px; }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .video-placeholder{animation:none}
   }
 </style>
 </head>
-<body class="bilingual">
+<body>
 
-<nav>
-  <a href="#" class="nav-brand">
-    <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100" height="100" rx="20" fill="#2C3E50"/>
-      <path d="M50 15 L57 38 L82 38 L62 53 L70 77 L50 62 L30 77 L38 53 L18 38 L43 38 Z" fill="white"/>
-      <rect x="25" y="80" width="50" height="8" rx="2" fill="#C0392B"/>
-    </svg>
-    Mi Salud <span>Texas</span>
-  </a>
-  <div class="nav-links">
-    <a href="#about" class="nav-link"><span class="bi"><span class="en">About</span><span class="es">Acerca</span></span></a>
-    <a href="#services" class="nav-link"><span class="bi"><span class="en">Services</span><span class="es">Servicios</span></span></a>
-    <a href="#benefits" class="nav-link"><span class="bi"><span class="en">Benefits</span><span class="es">Beneficios</span></span></a>
-    <a href="#blog" class="nav-link"><span class="bi"><span class="en">Blog</span><span class="es">Blog</span></span></a>
-    <a href="#why" class="nav-link"><span class="bi"><span class="en">Why Us</span><span class="es">Por Qué</span></span></a>
-  </div>
-  <a href="#contact" class="nav-cta" data-lead-source="Nav Bar CTA">
-    <span class="en">Free Consultation</span>
-    <span class="es" style="display:none">Consulta Gratis</span>
-  </a>
-</nav>
-
-<div class="aep-banner" id="aep-banner">
-  <span id="aep-banner-text">Loading...</span>
-  <button class="aep-close" onclick="dismissAepBanner()" aria-label="Close">✕</button>
-</div>
-
-<div class="lang-toggle">
-  <button class="lang-btn active" onclick="setLang('bilingual')">EN/ES</button>
-  <button class="lang-btn" onclick="setLang('english')">EN</button>
-  <button class="lang-btn" onclick="setLang('spanish')">ES</button>
-</div>
-
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-badge">🇲🇽 Bilingual Medicare Broker · Licensed in Texas</div>
-    <h1>
-      <div class="bi">
-        <span class="en">Your Medicare,<br/><span style="color:var(--red-light)">Explained Simply.</span></span>
-        <span class="es">Tu Medicare,<br/><span style="color:var(--red-light)">Explicado Claramente.</span></span>
+<header>
+  <div class="nav-row">
+    <a href="#" class="brand">Mi Salud <span>Texas</span></a>
+    <nav class="links">
+      <a href="#about"><span class="en">About</span><span class="es">Acerca</span></a>
+      <a href="#services"><span class="en">Services</span><span class="es">Servicios</span></a>
+      <a href="#benefits"><span class="en">Benefits</span><span class="es">Beneficios</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
       </div>
-    </h1>
-    <p class="hero-desc bi">
-      <span class="en">Navigating Medicare is confusing — especially without guidance in your language. I'm Paul Antonio Foxworth, a licensed Medicare broker serving Latino seniors across Texas. Let's find the right plan for you, together. Free of charge.</span>
-      <span class="es">Navegar Medicare puede ser confuso — especialmente sin orientación en tu idioma. Soy Paul Antonio Foxworth, corredor de Medicare con licencia sirviendo a adultos mayores latinos en Texas. Juntos encontramos el plan correcto para ti. Sin ningún costo.</span>
-    </p>
-    <div class="hero-actions">
-      <a href="#" class="btn-primary" id="call-btn">
-        📞 <span id="hero-phone"></span>
-      </a>
-      <a href="#" class="btn-secondary" id="whatsapp-btn" target="_blank">
-        💬 <span class="bi"><span class="en">WhatsApp Me</span><span class="es">Escríbeme por WhatsApp</span></span>
+      <a class="btn btn-primary" href="#contact">
+        <span class="en">Free Consultation</span><span class="es">Consulta Gratis</span>
       </a>
     </div>
-    <div class="hero-trust">
-      <div class="hero-trust-item"><span class="check">✓</span> <span class="bi"><span class="en">100% Free</span><span class="es">100% Gratis</span></span></div>
-      <div class="hero-trust-item"><span class="check">✓</span> <span class="bi"><span class="en">English & Spanish</span><span class="es">Inglés y Español</span></span></div>
-      <div class="hero-trust-item"><span class="check">✓</span> <span class="bi"><span class="en">All of Texas</span><span class="es">Todo Texas</span></span></div>
-      <div class="hero-trust-item"><span class="check">✓</span> <span class="bi"><span class="en">No Pressure</span><span class="es">Sin Presión</span></span></div>
+  </div>
+</header>
+
+<section class="hero-bg" aria-roledescription="carousel">
+  <div class="slide active">
+    <video autoplay muted loop playsinline preload="auto"><source src="hero-1.mp4" type="video/mp4"><source src="hero-1.webm" type="video/webm"></video>
+    <div class="wrap content">
+      <span class="eyebrow-line"><span class="en">Licensed &amp; Bilingual · Serving All of Texas</span><span class="es">Con Licencia y Bilingüe · Sirviendo Todo Texas</span></span>
+      <h1><span class="en">Your Medicare, explained in your language.</span><span class="es">Tu Medicare, explicado en tu idioma.</span></h1>
+      <p class="lead"><span class="en">I'm Paul Antonio Foxworth, a licensed broker serving Latino seniors across Texas. Free, bilingual, and without pressure.</span><span class="es">Soy Paul Antonio Foxworth, corredor con licencia sirviendo a adultos mayores latinos en Texas. Gratis, bilingüe y sin presión.</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact"><span class="en">Request a Free Consultation</span><span class="es">Solicita una Consulta Gratis</span></a>
+        <a class="btn btn-outline" href="tel:+14695563648">📞 <span class="en">Call Now</span><span class="es">Llamar Ahora</span></a>
+      </div>
     </div>
+  </div>
+  <!-- SLIDE 2: replace with <video autoplay muted loop playsinline src="hero-2.mp4"></video> -->
+  <div class="slide">
+    <div class="video-placeholder alt"></div>
+    <span class="video-note">VIDEO PLACEHOLDER</span>
+    <div class="wrap content">
+      <span class="eyebrow-line"><span class="en">Local Texas Broker</span><span class="es">Corredor Local en Texas</span></span>
+      <h1><span class="en">I also have Medicare. I make it simple.</span><span class="es">Yo también tengo Medicare. Yo te lo hago fácil.</span></h1>
+      <p class="lead"><span class="en">Compare plans with dental, OTC, grocery and utility benefits, in English or Spanish.</span><span class="es">Compara planes con beneficios dentales, farmacia, despensa y servicios, en inglés o español.</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#benefits"><span class="en">See Extra Benefits</span><span class="es">Ver Beneficios Extra</span></a>
+        <a class="btn btn-outline" href="#contact"><span class="en">Free Consultation</span><span class="es">Consulta Gratis</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-controls">
+    <button type="button" aria-label="Previous slide" onclick="heroGo(-1)">‹</button>
+    <button type="button" aria-label="Next slide" onclick="heroGo(1)">›</button>
   </div>
 </section>
 
-<div class="trust-strip">
-  <div class="trust-strip-inner">
-    <p class="trust-strip-label bi"><span class="en">INDEPENDENTLY REPRESENTING MAJOR CARRIERS IN TEXAS</span><span class="es">REPRESENTANDO A LAS PRINCIPALES ASEGURADORAS EN TEXAS</span></p>
-    <div class="trust-badges">
-      <span class="trust-badge">UnitedHealthcare</span>
-      <span class="trust-badge">Humana</span>
-      <span class="trust-badge">Aetna</span>
-      <span class="trust-badge">Blue Cross Blue Shield</span>
-      <span class="trust-badge">Cigna</span>
-      <span class="trust-badge">Wellcare</span>
+<div class="carriers">
+  <div class="wrap">
+    <span class="label"><span class="en">INDEPENDENTLY REPRESENTING</span><span class="es">REPRESENTANDO INDEPENDIENTEMENTE A</span></span>
+    <div class="names">
+      <span>UnitedHealthcare</span><span>Humana</span><span>Aetna</span><span>Blue Cross Blue Shield</span><span>Cigna</span><span>Wellcare</span>
     </div>
   </div>
 </div>
 
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="section-heading bi">
-      <div class="en">
-        <p class="section-label">About</p>
-        <h2 class="section-title">A Broker You Can Trust.<br/>In the Language You Prefer.</h2>
-      </div>
-      <div class="es">
-        <p class="section-label">Acerca de Mí</p>
-        <h2 class="section-title">Un Corredor de Confianza.<br/>En el Idioma que Prefieras.</h2>
-      </div>
+<section id="about">
+  <div class="wrap about-grid">
+    <figure class="video-frame">
+      <video autoplay muted loop playsinline preload="auto" poster="meet-paul-poster.jpg" aria-label="Paul Antonio Foxworth"><source src="meet-paul01.mp4" type="video/mp4"><source src="meet-paul.webm" type="video/webm"></video>
+      <figcaption><span class="en">Meet Paul</span><span class="es">Conoce a Paul</span></figcaption>
+    </figure>
+    <div>
+      <span class="kicker"><span class="en">About Paul</span><span class="es">Sobre Paul</span></span>
+      <h2><span class="en">A broker you can trust, in the language you prefer.</span><span class="es">Un corredor de confianza, en el idioma que prefieras.</span></h2>
+      <p>
+        <span class="en">I specialize in helping Latino seniors navigate Medicare — one of the most confusing systems in American healthcare. I understand the frustration of making big decisions without clear guidance, especially when language adds another layer of complexity.</span>
+        <span class="es">Me especializo en ayudar a adultos mayores latinos a navegar Medicare — uno de los sistemas más complicados de la salud americana. Entiendo la frustración de tomar decisiones importantes sin orientación clara, especialmente cuando el idioma añade otra capa de complejidad.</span>
+      </p>
+      <blockquote>
+        <span class="en">"I have Medicare too. I explain it the way I wish someone had explained it to me."</span>
+        <span class="es">"Yo también tengo Medicare. Lo explico como me hubiera gustado que me lo explicaran a mí."</span>
+      </blockquote>
+      <p>
+        <span class="en">My service is completely free — I'm paid by the insurance carriers, never by my clients.</span>
+        <span class="es">Mi servicio es completamente gratuito — me pagan las aseguradoras, nunca mis clientes.</span>
+      </p>
     </div>
-    <div class="about-grid">
-      <div class="about-photo-wrap">
-        <img src="profile2.png" alt="Paul Foxworth — Licensed Medicare Broker, Mi Salud Texas" class="about-photo"/>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span class="en">What I Help With</span><span class="es">Cómo Te Ayudo</span></span>
+      <h2><span class="en">Medicare can be complicated. I make it simple.</span><span class="es">Medicare puede ser complicado. Yo te lo hago fácil.</span></h2>
+    </div>
+    <div class="service-list">
+      <div class="service-row">
+        <div class="icon">🏥</div>
+        <div>
+          <h3><span class="en">Medicare Advantage</span><span class="es">Medicare Advantage</span></h3>
+          <p><span class="en">Compare all available plans in your area so you choose with confidence.</span><span class="es">Compara todos los planes disponibles en tu área para elegir con confianza.</span></p>
+        </div>
+        <a href="#contact"><span class="en">Learn more →</span><span class="es">Más información →</span></a>
       </div>
-      <div class="about-text">
-        <p class="bi">
-          <span class="en">Hi, I'm <strong>Paul Antonio Foxworth</strong>, a licensed Medicare broker based in Texas. I specialize in helping Latino seniors navigate Medicare — one of the most confusing systems in American healthcare.</span>
-          <span class="es">Hola, soy <strong>Paul Antonio Foxworth</strong>, corredor de Medicare con licencia en Texas. Me especializo en ayudar a adultos mayores latinos a navegar Medicare — uno de los sistemas más complicados de la salud americana.</span>
-        </p>
-        <p class="bi">
-          <span class="en">I understand the frustration of making important healthcare decisions without clear guidance — especially when language and culture add another layer of complexity.</span>
-          <span class="es">Entiendo la frustración de tomar decisiones importantes de salud sin orientación clara — especialmente cuando el idioma y la cultura añaden otra capa de complejidad.</span>
-        </p>
-        <p class="bi">
-          <span class="en">My service is <strong>completely free to you</strong>. I'm paid by the insurance carriers, never by my clients. That means unbiased, personalized guidance with zero cost and zero pressure.</span>
-          <span class="es">Mi servicio es <strong>completamente gratuito para ti</strong>. Me pagan las aseguradoras, nunca mis clientes. Eso significa orientación imparcial y personalizada sin ningún costo ni presión.</span>
-        </p>
+      <div class="service-row">
+        <div class="icon">💊</div>
+        <div>
+          <h3><span class="en">Prescription Drug Plans</span><span class="es">Plan de Medicamentos (Parte D)</span></h3>
+          <p><span class="en">Find the Part D plan that covers your medications at the lowest cost.</span><span class="es">Encuentra el plan Parte D que cubra tus medicamentos al menor costo.</span></p>
+        </div>
+        <a href="#contact"><span class="en">Learn more →</span><span class="es">Más información →</span></a>
+      </div>
+      <div class="service-row">
+        <div class="icon">🛡️</div>
+        <div>
+          <h3><span class="en">Medicare Supplements</span><span class="es">Suplementos de Medicare</span></h3>
+          <p><span class="en">Understand Medigap and how it reduces your out-of-pocket costs.</span><span class="es">Entiende los planes Medigap y cómo reducen tus gastos de bolsillo.</span></p>
+        </div>
+        <a href="#contact"><span class="en">Learn more →</span><span class="es">Más información →</span></a>
+      </div>
+      <div class="service-row">
+        <div class="icon">📋</div>
+        <div>
+          <h3><span class="en">Enrollment Guidance</span><span class="es">Guía de Inscripción</span></h3>
+          <p><span class="en">Avoid costly late-enrollment penalties with a clear, guided timeline.</span><span class="es">Evita las costosas multas por inscripción tardía con una guía clara.</span></p>
+        </div>
+        <a href="#contact"><span class="en">Learn more →</span><span class="es">Más información →</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="services" id="services">
-  <div class="section-inner">
-    <div class="section-heading bi">
-      <div class="en">
-        <p class="section-label">What I Help With</p>
-        <h2 class="section-title">Medicare Can Be Complicated.<br/>I know because I also have Medicare.<br/>I Make It Simple.</h2>
+<section id="benefits" class="benefits">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span class="en">Extra Benefits</span><span class="es">Beneficios Adicionales</span></span>
+      <h2><span class="en">Some plans include benefits far beyond Original Medicare</span><span class="es">Algunos planes incluyen beneficios más allá del Medicare Original</span></h2>
+      <p style="color:#B9C2CB"><span class="en">At $0 or near-$0 cost, depending on carrier, plan and county.</span><span class="es">A $0 o casi $0 de costo, según la aseguradora, el plan y el condado.</span></p>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-col">
+        <h3>🦷 <span class="en">Dental Care</span><span class="es">Cuidado Dental</span></h3>
+        <ul>
+          <li><span><span class="en">Implants, $0 deductible</span><span class="es">Implantes, $0 deducible</span></span><span class="amt">2/yr</span></li>
+          <li><span><span class="en">Cleanings &amp; fluoride</span><span class="es">Limpiezas y flúor</span></span><span class="amt">$0</span></li>
+          <li><span><span class="en">Deep cleaning</span><span class="es">Limpieza profunda</span></span><span class="amt">$0</span></li>
+        </ul>
       </div>
-      <div class="es">
-        <p class="section-label">Cómo Te Ayudo</p>
-        <h2 class="section-title">Medicare Puede Ser Complicado.<br/>Lo se porque yo tambien tengo Medicare. Yo Te Lo Hago Facil.</h2>
+      <div class="benefit-col">
+        <h3>💊 <span class="en">OTC Allowance</span><span class="es">Beneficio de Farmacia (OTC)</span></h3>
+        <ul>
+          <li><span><span class="en">Vitamins, pain relief &amp; more</span><span class="es">Vitaminas, analgésicos y más</span></span><span class="amt">$50/mo</span></li>
+        </ul>
+      </div>
+      <div class="benefit-col">
+        <h3>💳 <span class="en">Flex Benefits Card</span><span class="es">Tarjeta de Beneficios Flexibles</span></h3>
+        <ul>
+          <li><span><span class="en">Groceries</span><span class="es">Despensa</span></span><span class="amt">$75/mo</span></li>
+          <li><span><span class="en">Utilities</span><span class="es">Servicios públicos</span></span><span class="amt">$50/mo</span></li>
+          <li><span><span class="en">Gasoline</span><span class="es">Gasolina</span></span><span class="amt">$25/mo</span></li>
+        </ul>
       </div>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🏥</div>
-        <h3><span class="es-title">Medicare Advantage</span>Medicare Advantage</h3>
-        <p class="bi">
-          <span class="en">Compare all available Medicare Advantage plans in your area. I'll explain the differences clearly so you choose with confidence.</span>
-          <span class="es">Compara todos los planes de Medicare Advantage disponibles en tu área. Te explico las diferencias claramente para que elijas con confianza.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💊</div>
-        <h3><span class="es-title">Plan de Medicamentos (Parte D)</span>Prescription Drug Plans</h3>
-        <p class="bi">
-          <span class="en">Find the right Part D plan that covers your medications at the lowest possible cost.</span>
-          <span class="es">Encuentra el plan Parte D que cubra tus medicamentos al menor costo posible.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🛡️</div>
-        <h3><span class="es-title">Suplementos de Medicare</span>Medicare Supplements</h3>
-        <p class="bi">
-          <span class="en">Understand Medigap plans and how they work alongside Original Medicare to reduce your out-of-pocket costs.</span>
-          <span class="es">Entiende los planes Medigap y cómo funcionan junto al Medicare Original para reducir tus gastos de bolsillo.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📋</div>
-        <h3><span class="es-title">Guía de Inscripción</span>Enrollment Guidance</h3>
-        <p class="bi">
-          <span class="en">Avoid costly late enrollment penalties. I'll walk you through exactly when and how to enroll in Medicare the right way.</span>
-          <span class="es">Evita las costosas multas por inscripción tardía. Te guío exactamente cuándo y cómo inscribirte en Medicare correctamente.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔄</div>
-        <h3><span class="es-title">Revisión Anual del Plan</span>Annual Plan Review</h3>
-        <p class="bi">
-          <span class="en">Plans change every year. I'll review your coverage during Open Enrollment to make sure you still have the best plan.</span>
-          <span class="es">Los planes cambian cada año. Reviso tu cobertura durante la Inscripción Abierta para asegurar que tengas el mejor plan.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">👨‍👩‍👧</div>
-        <h3><span class="es-title">Apoyo Familiar</span>Family Support</h3>
-        <p class="bi">
-          <span class="en">Helping a parent navigate Medicare? I work with adult children in English while communicating with seniors in Spanish.</span>
-          <span class="es">¿Ayudando a tus padres con Medicare? Trabajo con hijos adultos en inglés mientras me comunico con los mayores en español.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="blog" id="blog">
-  <div class="section-inner">
-    <div class="section-heading bi">
-      <div class="en">
-        <p class="section-label">Latest Articles</p>
-        <h2 class="section-title">Helpful Resources</h2>
-      </div>
-      <div class="es">
-        <p class="section-label">Últimos Artículos</p>
-        <h2 class="section-title">Recursos Útiles</h2>
-      </div>
-    </div>
-    <div class="blog-grid">
-      <a href="blog-costo-medicare-parte-b-texas.html" class="blog-card">
-        <div class="blog-card-icon">💰</div>
-        <h3>Cuánto cuesta Medicare Parte B en Texas</h3>
-        <p>Costo estándar $202.90, deducible, coseguro y recargos IRMAA según ingresos.</p>
-        <span class="blog-read-more">Leer más →</span>
-      </a>
-      <a href="blog-inscripcion-medicare-65-texas.html" class="blog-card">
-        <div class="blog-card-icon">📝</div>
-        <h3>Cómo inscribirse en Medicare a los 65 en Texas</h3>
-        <p>Periodo de inscripción inicial, inscripción automática y cómo evitar multas.</p>
-        <span class="blog-read-more">Leer más →</span>
-      </a>
-      <a href="blog-medicare-advantage-como-funciona.html" class="blog-card">
-        <div class="blog-card-icon">🏥</div>
-        <h3>Qué es Medicare Advantage y cómo funciona</h3>
-        <p>Red de proveedores, MOOP, beneficios dentales, visión y audición.</p>
-        <span class="blog-read-more">Leer más →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="benefits" id="benefits">
-  <div class="section-inner">
-    <div class="section-heading bi">
-      <div class="en">
-        <p class="section-label">Extra Benefits</p>
-        <h2 class="section-title">Some Plans Include Benefits<br/>Far Beyond Original Medicare</h2>
-      </div>
-      <div class="es">
-        <p class="section-label">Beneficios Adicionales</p>
-        <h2 class="section-title">Algunos Planes Incluyen Beneficios<br/>Más Allá del Medicare Original</h2>
-      </div>
-    </div>
-    <p class="benefits-intro bi">
-      <span class="en">Many Medicare Advantage plans available in Texas now come with extra benefits like these — at $0 or near $0 cost. Whether a plan offers them, and how much, depends on the carrier, the specific plan, and your county.</span>
-      <span class="es">Muchos planes de Medicare Advantage disponibles en Texas ahora incluyen beneficios extra como estos — a $0 o casi $0 de costo. Que un plan los ofrezca, y cuánto, depende de la aseguradora, el plan específico y tu condado.</span>
+    <p class="benefits-fine">
+      <span class="en">Amounts shown are examples of what select plans may offer and are not a guarantee of coverage. Availability varies by carrier, plan and service area. Some benefits require eligibility confirmed directly by the plan or a healthcare provider — never through this website.</span>
+      <span class="es">Los montos mostrados son ejemplos de lo que algunos planes pueden ofrecer y no garantizan cobertura. La disponibilidad varía según la aseguradora, el plan y el área de servicio. Algunos beneficios requieren elegibilidad confirmada directamente con el plan o un proveedor de salud — nunca a través de este sitio web.</span>
     </p>
+  </div>
+</section>
 
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-card-icon">🦷</div>
-        <h3><span class="es-title">Cuidado Dental</span>Dental Care</h3>
-        <ul class="benefit-list">
-          <li><span class="amount bi"><span class="en">2 per year</span><span class="es">2 por año</span></span> <span class="bi"><span class="en">Implants, $0 deductible</span><span class="es">Implantes, $0 deducible</span></span></li>
-          <li><span class="amount bi"><span class="en">$0 ded.</span><span class="es">$0 ded.</span></span> <span class="bi"><span class="en">Cleanings & fluoride</span><span class="es">Limpiezas y flúor</span></span></li>
-          <li><span class="amount bi"><span class="en">$0 ded.</span><span class="es">$0 ded.</span></span> <span class="bi"><span class="en">Deep cleaning</span><span class="es">Limpieza profunda</span></span></li>
-        </ul>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-card-icon">💊</div>
-        <h3><span class="es-title">Beneficio de Farmacia (OTC)</span>Over-the-Counter Allowance</h3>
-        <ul class="benefit-list">
-          <li><span class="amount bi"><span class="en">$50/mo</span><span class="es">$50/mes</span></span> <span class="bi"><span class="en">For vitamins, pain relief, first aid & more</span><span class="es">Para vitaminas, analgésicos, primeros auxilios y más</span></span></li>
-        </ul>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-card-icon">💳</div>
-        <h3><span class="es-title">Tarjeta de Beneficios Flexibles</span>Flex Benefits Card</h3>
-        <ul class="benefit-list">
-          <li><span class="amount bi"><span class="en">$75/mo</span><span class="es">$75/mes</span></span> <span class="bi"><span class="en">Groceries</span><span class="es">Despensa</span></span></li>
-          <li><span class="amount bi"><span class="en">$50/mo</span><span class="es">$50/mes</span></span> <span class="bi"><span class="en">Nutrition care products</span><span class="es">Productos de nutrición</span></span></li>
-          <li><span class="amount bi"><span class="en">$50/mo</span><span class="es">$50/mes</span></span> <span class="bi"><span class="en">Utilities</span><span class="es">Servicios públicos</span></span></li>
-          <li><span class="amount bi"><span class="en">$25/mo</span><span class="es">$25/mes</span></span> <span class="bi"><span class="en">Gasoline</span><span class="es">Gasolina</span></span></li>
-          <li><span class="amount bi"><span class="en">$20/mo</span><span class="es">$20/mes</span></span> <span class="bi"><span class="en">Beauty & spa</span><span class="es">Belleza y spa</span></span></li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="benefits-disclaimer bi">
-      <span class="en">Benefit amounts shown are examples of what select plans may offer and are not a guarantee of coverage. Not every plan offers every benefit listed, and availability varies by insurance carrier, plan, and service area (county). Some benefits — including grocery, utility, and wellness allowances — are only available to members who meet plan-specific eligibility criteria, which is confirmed directly by the plan or a healthcare provider, never through this website. Benefits, premiums, and copays may change each plan year. I am an independent broker and can check exactly what's available for your ZIP code, at no cost.</span>
-      <span class="es">Los montos mostrados son ejemplos de lo que algunos planes pueden ofrecer y no garantizan cobertura. No todos los planes ofrecen todos los beneficios enumerados, y la disponibilidad varía según la aseguradora, el plan y el área de servicio (condado). Algunos beneficios — incluyendo los de despensa, servicios y bienestar — solo están disponibles para miembros que cumplen con criterios de elegibilidad específicos del plan, lo cual se confirma directamente con el plan o un proveedor de salud, nunca a través de este sitio web. Los beneficios, primas y copagos pueden cambiar cada año del plan. Soy un corredor independiente y puedo revisar exactamente qué está disponible para tu código postal, sin ningún costo.</span>
-    </p>
-
-    <div class="benefits-cta">
-      <div id="quiz-step-1">
-        <h3 class="bi"><span class="en">Curious What You Might Qualify For?</span><span class="es">¿Tienes Curiosidad de Para Qué Podrías Calificar?</span></h3>
-        <p class="bi"><span class="en">Tell me what interests you most, and I'll check your options — free, no obligation.</span><span class="es">Dime qué te interesa más, y reviso tus opciones — gratis, sin compromiso.</span></p>
-        <div class="quiz-options">
-          <button type="button" class="quiz-btn" onclick="showQuizResults('dental')"><span class="bi"><span class="en">🦷 Dental &amp; OTC</span><span class="es">🦷 Dental y Farmacia</span></span></button>
-          <button type="button" class="quiz-btn" onclick="showQuizResults('everyday')"><span class="bi"><span class="en">🛒 Groceries &amp; Utilities</span><span class="es">🛒 Despensa y Servicios</span></span></button>
-          <button type="button" class="quiz-btn" onclick="showQuizResults('all')"><span class="bi"><span class="en">Not Sure — Show Me Everything</span><span class="es">No Estoy Seguro — Muéstrame Todo</span></span></button>
-        </div>
-      </div>
-
-      <div id="quiz-step-2" style="display:none;">
-        <div class="quiz-result">
-          <p class="quiz-check bi"><span class="en">✓ Dental care and pharmacy (OTC) benefits are included in many Medicare Advantage plans — I can check exactly what's in yours.</span><span class="es">✓ Los beneficios dentales y de farmacia (OTC) están incluidos en muchos planes de Medicare Advantage — puedo revisar exactamente lo que tiene el tuyo.</span></p>
-          <p class="quiz-check bi"><span class="en">Some plans also offer extra grocery, utility, and wellness benefits to members who meet the plan's eligibility criteria. That's confirmed directly by the plan or your healthcare provider — never through this website. If it interests you, I'll check at no cost.</span><span class="es">Algunos planes también ofrecen beneficios extra de despensa, servicios y bienestar para miembros que cumplen con los criterios de elegibilidad del plan. Eso se confirma directamente con el plan o tu proveedor de salud — nunca a través de este sitio web. Si te interesa, lo reviso sin costo.</span></p>
-          <p class="quiz-check quiz-check-highlight bi"><span class="en">✓ You may also be eligible for Extra Help — a federal program that lowers or eliminates your Medicare drug plan premiums and copays based on income.</span><span class="es">✓ También podrías ser elegible para Extra Help — un programa federal que reduce o elimina las primas y copagos de tu plan de medicamentos de Medicare según tus ingresos.</span></p>
-        </div>
-
-        <p class="bi" style="margin-top:1.25rem;"><span class="en">Leave your info and I'll confirm exactly what you qualify for — free, no obligation.</span><span class="es">Déjame tu información y confirmo exactamente para qué calificas — gratis, sin compromiso.</span></p>
-        <form class="benefits-form" action="https://formspree.io/f/mnnzznbv" method="POST" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="form_name" value="Benefits Eligibility Quiz"/>
-          <input type="hidden" name="lead_source" value="Benefits Section Quiz"/>
-          <input type="hidden" name="benefit_interest" id="quiz-answer-field" value=""/>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="bi"><span class="en">First Name</span><span class="es">Nombre</span></label>
-              <input type="text" name="first_name" placeholder="Maria" required/>
-            </div>
-            <div class="form-group">
-              <label class="bi"><span class="en">Phone</span><span class="es">Teléfono</span></label>
-              <input type="tel" name="phone" placeholder="(555) 000-0000" required/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="bi"><span class="en">ZIP Code</span><span class="es">Código Postal</span></label>
-            <input type="text" name="zip" inputmode="numeric" pattern="[0-9]{5}" placeholder="78201" required/>
-          </div>
-          <button type="submit" class="form-submit bi">
-            <span class="en">Check My Benefits</span>
-            <span class="es">Ver Mis Beneficios</span>
-          </button>
-          <p class="form-note bi">
-            <span class="en">🔒 Your information is private and never shared.</span>
-            <span class="es">🔒 Tu información es privada y nunca se comparte.</span>
-          </p>
-        </form>
+<section>
+  <div class="wrap proof">
+    <figure class="video-frame quote-frame">
+      <div class="video-placeholder"></div>
+      <span class="video-note">VIDEO PLACEHOLDER</span>
+      <figcaption><span class="en">What clients are saying</span><span class="es">Lo que dicen mis clientes</span></figcaption>
+    </figure>
+    <div>
+      <span class="kicker"><span class="en">Why Mi Salud Texas</span><span class="es">Por Qué Mi Salud Texas</span></span>
+      <h2><span class="en">The Latino Medicare market deserves better.</span><span class="es">La comunidad Latina merece mejor orientación.</span></h2>
+      <div class="stat-row">
+        <div class="stat"><span class="num">70%</span><span class="lbl"><span class="en">report little/no knowledge of options</span><span class="es">reporta poco o ningún conocimiento de sus opciones</span></span></div>
+        <div class="stat"><span class="num">426</span><span class="lbl"><span class="en">plans available in Texas (2026)</span><span class="es">planes disponibles en Texas (2026)</span></span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl"><span class="en">free to you, always</span><span class="es">gratis para ti, siempre</span></span></div>
+        <div class="stat"><span class="num">2</span><span class="lbl"><span class="en">languages, naturally bilingual</span><span class="es">idiomas, naturalmente bilingüe</span></span></div>
       </div>
     </div>
   </div>
 </section>
 
-
-<section class="why" id="why">
-  <div class="section-inner">
-    <div class="section-heading bi">
-      <div class="en">
-        <p class="section-label" style="color:rgba(255,120,100,0.8)">Why Mi Salud Texas</p>
-        <h2 class="section-title">The Latino Medicare Market<br/>Deserves Better.</h2>
-      </div>
-      <div class="es">
-        <p class="section-label" style="color:rgba(255,120,100,0.8)">Por Qué Mi Salud Texas</p>
-        <h2 class="section-title">La Comunidad Latina Merece<br/>Mejor Orientación.</h2>
-      </div>
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="kicker"><span class="en">Get In Touch</span><span class="es">Contáctame</span></span>
+      <h2><span class="en">Ready to find your perfect Medicare plan?</span><span class="es">¿Listo para encontrar tu plan de Medicare ideal?</span></h2>
+      <p><span class="en">All consultations are free, bilingual, and without pressure.</span><span class="es">Todas las consultas son gratuitas, bilingües y sin presión.</span></p>
+      <p class="big">📞 (469) 5563648</p>
+      <p><span class="en">Please feel free to text or WhatsApp me.</span><span class="es">Escríbeme por mensaje de texto o WhatsApp.</span></p>
     </div>
-    <div class="why-grid">
-      <div class="why-item">
-        <span class="why-num">70%</span>
-        <h4 class="bi"><span class="en">Underserved</span><span class="es">Sin Orientación</span></h4>
-        <p class="bi"><span class="en">Of Hispanic Medicare beneficiaries report little or no knowledge of their options.</span><span class="es">De los beneficiarios hispanos de Medicare reportan poco o ningún conocimiento de sus opciones.</span></p>
+    <form id="lead-form" novalidate>
+      <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="two">
+        <div><label for="f-first"><span class="en">First name</span><span class="es">Nombre</span></label><input id="f-first" name="first_name" autocomplete="given-name" required></div>
+        <div><label for="f-last"><span class="en">Last name</span><span class="es">Apellido</span></label><input id="f-last" name="last_name" autocomplete="family-name" required></div>
       </div>
-      <div class="why-item">
-        <span class="why-num">426</span>
-        <h4 class="bi"><span class="en">Plans in Texas</span><span class="es">Planes en Texas</span></h4>
-        <p class="bi"><span class="en">Medicare Advantage plans available in Texas in 2026 — choosing alone is overwhelming.</span><span class="es">Planes de Medicare Advantage disponibles en Texas en 2026 — elegir solo es abrumador.</span></p>
-      </div>
-      <div class="why-item">
-        <span class="why-num">100%</span>
-        <h4 class="bi"><span class="en">Free to You</span><span class="es">Gratis Para Ti</span></h4>
-        <p class="bi"><span class="en">My service costs you nothing. Ever. Insurance carriers compensate me directly.</span><span class="es">Mi servicio no te cuesta nada. Jamás. Las aseguradoras me compensan directamente.</span></p>
-      </div>
-      <div class="why-item">
-        <span class="why-num">2</span>
-        <h4 class="bi"><span class="en">Languages</span><span class="es">Idiomas</span></h4>
-        <p class="bi"><span class="en">Fluent in English and Spanish — naturally bilingual, not just translated.</span><span class="es">Fluido en inglés y español — naturalmente bilingüe, no solo traducido.</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="section-inner">
-    <div class="section-heading bi">
-      <div class="en">
-        <p class="section-label">Get In Touch</p>
-        <h2 class="section-title">Ready to Find Your Perfect<br/>Medicare Plan?</h2>
-      </div>
-      <div class="es">
-        <p class="section-label">Contáctame</p>
-        <h2 class="section-title">¿Listo para Encontrar tu<br/>Plan de Medicare Ideal?</h2>
-      </div>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <p style="color:var(--text-mid);line-height:1.7;margin-bottom:1.75rem" class="bi">
-          <span class="en">Reach out any way that's comfortable for you. All consultations are free, bilingual, and completely without pressure.</span>
-          <span class="es">Contáctame de la manera que te sea más cómoda. Todas las consultas son gratuitas, bilingüe y completamente sin presión.</span>
-        </p>
-        <div class="contact-methods">
-          <a href="#" class="contact-method" id="contact-call">
-            <div class="contact-method-icon icon-phone">📞</div>
-            <div class="contact-method-text">
-              <strong id="contact-phone"></strong>
-              <span class="bi"><span class="en">Call anytime</span><span class="es">Llámame cuando quieras</span></span>
-            </div>
-          </a>
-          <a href="#" class="contact-method" id="contact-whatsapp" target="_blank">
-            <div class="contact-method-icon icon-whatsapp">💬</div>
-            <div class="contact-method-text">
-              <strong>WhatsApp</strong>
-              <span class="bi"><span class="en">Message me directly</span><span class="es">Escríbeme directamente</span></span>
-            </div>
-          </a>
-          <a href="mailto:info@misaludtexas.com" class="contact-method">
-            <div class="contact-method-icon icon-email">✉️</div>
-            <div class="contact-method-text">
-              <strong>info@misaludtexas.com</strong>
-              <span class="bi"><span class="en">Email anytime</span><span class="es">Escríbeme por correo</span></span>
-            </div>
-          </a>
-        </div>
+      <div class="two">
+        <div><label for="f-phone"><span class="en">Phone</span><span class="es">Teléfono</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div><label for="f-zip"><span class="en">ZIP code</span><span class="es">Código postal</span></label><input id="f-zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" required></div>
       </div>
       <div>
-        <form class="contact-form" action="https://formspree.io/f/mnnzznbv" method="POST" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="form_name" value="Main Contact Form"/>
-          <input type="hidden" name="lead_source" id="contact-lead-source" value="Direct / Scrolled to Form"/>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="bi"><span class="en">First Name</span><span class="es">Nombre</span></label>
-              <input type="text" name="first_name" placeholder="Maria" required/>
-            </div>
-            <div class="form-group">
-              <label class="bi"><span class="en">Last Name</span><span class="es">Apellido</span></label>
-              <input type="text" name="last_name" placeholder="Garcia" required/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="bi"><span class="en">Phone</span><span class="es">Teléfono</span></label>
-            <input type="tel" name="phone" placeholder="(555) 000-0000" required/>
-          </div>
-          <div class="form-group">
-            <label class="bi"><span class="en">Preferred Language</span><span class="es">Idioma Preferido</span></label>
-            <select name="preferred_language">
-              <option value="english">English / Inglés</option>
-              <option value="spanish">Español / Spanish</option>
-              <option value="both">Both / Los dos</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="bi"><span class="en">How can I help you?</span><span class="es">¿Cómo puedo ayudarte?</span></label>
-            <textarea class="bi" name="message" placeholder="Tell me a little about your situation... / Cuéntame un poco sobre tu situación..."></textarea>
-          </div>
-          <button type="submit" class="form-submit bi">
-            <span class="en">Send Message</span>
-            <span class="es">Enviar Mensaje</span>
-          </button>
-          <p class="form-note bi">
-            <span class="en">🔒 Your information is private and never shared.</span>
-            <span class="es">🔒 Tu información es privada y nunca se comparte.</span>
-          </p>
-        </form>
+        <label for="f-lang"><span class="en">Preferred language</span><span class="es">Idioma preferido</span></label>
+        <select id="f-lang" name="language">
+          <option value="English">English / Inglés</option>
+          <option value="Spanish" selected>Español / Spanish</option>
+          <option value="Both">Both / Los dos</option>
+        </select>
       </div>
-    </div>
+      <div><label for="f-msg"><span class="en">How can I help you?</span><span class="es">¿Cómo puedo ayudarte?</span></label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+      <p class="consent"><span class="en">By sending this, you agree I may contact you by phone, text or email about Medicare options. You are under no obligation to enroll.</span><span class="es">Al enviar, aceptas que te contacte por teléfono, texto o correo sobre opciones de Medicare. No tienes ninguna obligación de inscribirte.</span></p>
+      <button class="btn btn-primary" type="submit" id="lead-btn"><span class="en">Send Message</span><span class="es">Enviar Mensaje</span></button>
+      <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+      <p class="consent">🔒 <span class="en">Your information is private and never shared.</span><span class="es">Tu información es privada y nunca se comparte.</span></p>
+    </form>
   </div>
 </section>
-
-<div class="mobile-cta-bar">
-  <a href="#" id="mobile-call">📞 <span class="bi"><span class="en">Call</span><span class="es">Llamar</span></span></a>
-  <a href="#" id="mobile-whatsapp" target="_blank">💬 WhatsApp</a>
-</div>
 
 <footer>
-  <p class="brand">Mi Salud Texas</p>
-  <p class="bi">
-    <span class="en">Licensed Medicare Broker · Serving All of Texas · Bilingual English & Spanish</span>
-    <span class="es">Corredor de Medicare con Licencia · Sirviendo Todo Texas · Bilingüe Inglés y Español</span>
-  </p>
-  <p style="margin-top:0.5rem">
-    <a href="#" id="footer-call">
-      <span id="footer-phone"></span>
-    </a> ·
-    <a href="mailto:info@misaludtexas.com">info@misaludtexas.com</a> ·
-    <a href="#" id="footer-whatsapp" target="_blank">WhatsApp</a>
-  </p>
-  <p style="margin-top:1rem;font-size:0.78rem;opacity:0.5" class="bi">
-    <span class="en">© 2026 Mi Salud Texas. Not affiliated with Medicare or any government agency.</span>
-    <span class="es">© 2026 Mi Salud Texas. No afiliado con Medicare ni con ninguna agencia gubernamental.</span>
-  </p>
+  <div class="wrap">
+    <div><strong>Mi Salud Texas</strong> — <span class="en">Licensed Medicare Broker · Bilingual English &amp; Spanish</span><span class="es">Corredor de Medicare con Licencia · Bilingüe Inglés y Español</span></div>
+    <p class="legal">
+      <span class="en">We do not offer every plan available in your area. Contact Medicare.gov, 1-800-MEDICARE, or your local SHIP for information on all options. Not affiliated with Medicare or any government agency.</span>
+      <span class="es">No ofrecemos todos los planes disponibles en tu área. Contacta Medicare.gov, 1-800-MEDICARE o tu programa SHIP local para información sobre todas tus opciones. No afiliado con Medicare ni con ninguna agencia gubernamental.</span>
+    </p>
+  </div>
 </footer>
 
+<div class="sticky-bar">
+  <a href="tel:+14695563648">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
+  <a href="#" onclick="return false;">💬 WhatsApp</a>
+  <a href="#contact"><span class="en">Free Consultation</span><span class="es">Consulta Gratis</span></a>
+</div>
+
+
+<div class="modal-back" id="aep" role="dialog" aria-modal="true" aria-labelledby="aep-t">
+  <div class="modal">
+    <button class="x" type="button" aria-label="Close" onclick="aepClose()">×</button>
+    <h3 id="aep-t"><span class="en">Medicare Annual Enrollment</span><span class="es">Inscripción Anual de Medicare</span></h3>
+    <p><span class="en">Runs October 15 – December 7. Plans change every year, so let's make sure yours still fits. I'm here to help.</span><span class="es">Del 15 de octubre al 7 de diciembre. Los planes cambian cada año, así que revisemos que el tuyo siga siendo el mejor. Estoy aquí para ayudarte.</span></p>
+    <a class="btn btn-outline" href="#contact" onclick="aepPick('Current client: annual plan review')"><span class="en">I'm a current client</span><span class="es">Soy cliente actual</span></a>
+    <a class="btn btn-primary" href="#contact" onclick="aepPick('New client: Medicare plan help')"><span class="en">I'm a new client</span><span class="es">Soy cliente nuevo</span></a>
+  </div>
+</div>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var phone = atob('KDQ2OSkgNTU2LTM2NDg=');
-  var phoneLink = 'tel:+' + atob('MTQ2OTU1NjM2NDg=');
-  var whatsappLink = 'https://wa.me/' + atob('MTQ2OTU1NjM2NDg=');
-  
-  var heroPhone = document.getElementById('hero-phone');
-  if (heroPhone) { heroPhone.textContent = phone; }
-  var callBtn = document.getElementById('call-btn');
-  if (callBtn) { callBtn.href = phoneLink; }
-  var whatsappBtn = document.getElementById('whatsapp-btn');
-  if (whatsappBtn) { whatsappBtn.href = whatsappLink; }
-  
-  var contactPhone = document.getElementById('contact-phone');
-  if (contactPhone) { contactPhone.textContent = phone; }
-  var contactCall = document.getElementById('contact-call');
-  if (contactCall) { contactCall.href = phoneLink; }
-  var contactWhatsapp = document.getElementById('contact-whatsapp');
-  if (contactWhatsapp) { contactWhatsapp.href = whatsappLink; }
-  
-  var footerPhone = document.getElementById('footer-phone');
-  if (footerPhone) { footerPhone.textContent = phone; }
-  var footerCall = document.getElementById('footer-call');
-  if (footerCall) { footerCall.href = phoneLink; }
-  var footerWhatsapp = document.getElementById('footer-whatsapp');
-  if (footerWhatsapp) { footerWhatsapp.href = whatsappLink; }
+function setLang(l){
+  document.documentElement.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.getElementById('btn-es').classList.toggle('active', l==='es');
+  try{ localStorage.setItem('mst-lang', l); }catch(e){}
+}
+try{
+  var saved = localStorage.getItem('mst-lang');
+  if(saved) setLang(saved);
+}catch(e){}
 
-  var mobileCall = document.getElementById('mobile-call');
-  if (mobileCall) { mobileCall.href = phoneLink; }
-  var mobileWhatsapp = document.getElementById('mobile-whatsapp');
-  if (mobileWhatsapp) { mobileWhatsapp.href = whatsappLink; }
-});
-
-function setLang(lang) {
-  document.body.className = lang;
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-  const map = { bilingual: 0, english: 1, spanish: 2 };
-  document.querySelectorAll('.lang-btn')[map[lang]].classList.add('active');
-  const navCta = document.querySelector('.nav-cta');
-  if (lang === 'spanish') {
-    navCta.querySelector('.en').style.display = 'none';
-    navCta.querySelector('.es').style.display = 'inline';
-  } else if (lang === 'english') {
-    navCta.querySelector('.en').style.display = 'inline';
-    navCta.querySelector('.es').style.display = 'none';
-  } else {
-    navCta.querySelector('.en').style.display = 'inline';
-    navCta.querySelector('.es').style.display = 'none';
-  }
+var heroI=0,heroSlides=document.querySelectorAll('.slide');
+function heroGo(d){
+  heroSlides[heroI].classList.remove('active');
+  heroI=(heroI+d+heroSlides.length)%heroSlides.length;
+  heroSlides[heroI].classList.add('active');
+}
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  setInterval(function(){heroGo(1)},9000);
 }
 
-// ----- Track which CTA led to the contact form -----
-document.addEventListener('click', function (e) {
-  var link = e.target.closest('a[data-lead-source]');
-  if (!link) return;
-  var field = document.getElementById('contact-lead-source');
-  if (field) { field.value = link.getAttribute('data-lead-source'); }
-});
-
-async function handleSubmit(e) {
+/* ===== Lead form =====
+   Set FORM_ENDPOINT to your Formspree/Netlify/CRM URL, e.g. 'https://formspree.io/f/mnnzznbv'.
+   While empty, the form runs in demo mode (nothing is sent). */
+var FORM_ENDPOINT='';
+var MSG={
+  ok:{en:'Thank you! I will contact you shortly.',es:'¡Gracias! Me comunicaré contigo pronto.'},
+  bad:{en:'Please complete your name, phone and 5-digit ZIP code.',es:'Completa tu nombre, teléfono y código postal de 5 dígitos.'},
+  err:{en:'Something went wrong. Please call or text me instead.',es:'Algo salió mal. Por favor llámame o escríbeme.'},
+  demo:{en:'Demo mode: the form works but is not connected yet, so nothing was sent.',es:'Modo demo: el formulario funciona pero aún no está conectado, no se envió nada.'}
+};
+var leadForm=document.getElementById('lead-form'),st=document.getElementById('form-status');
+function say(k,cls){var l=document.documentElement.getAttribute('data-lang');st.className='form-status '+cls;st.textContent=MSG[k][l];}
+leadForm.addEventListener('submit',function(e){
   e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const originalHTML = btn.innerHTML;
-  btn.disabled = true;
-  btn.textContent = 'Sending... · Enviando...';
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (!response.ok) throw new Error('Submission failed');
-    btn.textContent = '✓ Sent! · ¡Enviado!';
-    btn.style.background = '#27ae60';
-    form.reset();
-  } catch (err) {
-    btn.disabled = false;
-    btn.innerHTML = originalHTML;
-    alert('Something went wrong. Please call or WhatsApp me directly. / Algo salió mal. Por favor llámame o escríbeme por WhatsApp.');
-  }
-}
+  var d=Object.fromEntries(new FormData(leadForm).entries());
+  if(d.website){return;} /* honeypot: bots fill this */
+  if(!d.first_name.trim()||!d.last_name.trim()||d.phone.replace(/\D/g,'').length<10||!/^\d{5}$/.test(d.zip)){say('bad','err');return;}
+  if(!FORM_ENDPOINT){say('demo','ok');return;}
+  var btn=document.getElementById('lead-btn');btn.disabled=true;
+  fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+    .then(function(r){if(!r.ok)throw 0;say('ok','ok');leadForm.reset();})
+    .catch(function(){say('err','err');})
+    .then(function(){btn.disabled=false;});
+});
 
-// ----- Benefits interest quiz (no health data collected — interest only) -----
-function showQuizResults(interest) {
-  document.getElementById('quiz-step-1').style.display = 'none';
-  document.getElementById('quiz-step-2').style.display = 'block';
-  var field = document.getElementById('quiz-answer-field');
-  if (field) { field.value = interest; }
-}
-
-
-// ----- AEP countdown banner -----
-(function () {
-  var banner = document.getElementById('aep-banner');
-  var textEl = document.getElementById('aep-banner-text');
-  if (!banner || !textEl) return;
-
-  if (sessionStorage.getItem('aepBannerDismissed') === '1') {
-    banner.style.display = 'none';
-    document.body.classList.add('no-aep-banner');
-    return;
-  }
-
-  var now = new Date();
-  var year = now.getFullYear();
-  var aepStart = new Date(year, 9, 15);           // Oct 15
-  var aepEnd = new Date(year, 11, 7, 23, 59, 59);  // Dec 7
-
-  var msPerDay = 1000 * 60 * 60 * 24;
-  var textEn, textEs;
-
-  if (now < aepStart) {
-    var daysToStart = Math.ceil((aepStart - now) / msPerDay);
-    textEn = '🗓️ Medicare Annual Enrollment (Oct 15 – Dec 7) starts in ' + daysToStart + ' days — get ready.';
-    textEs = '🗓️ La Inscripción Anual de Medicare (15 oct – 7 dic) comienza en ' + daysToStart + ' días — prepárate.';
-  } else if (now <= aepEnd) {
-    var daysToEnd = Math.ceil((aepEnd - now) / msPerDay);
-    textEn = '🗓️ Medicare Annual Enrollment is open now — ' + daysToEnd + ' days left to switch plans.';
-    textEs = '🗓️ La Inscripción Anual de Medicare está abierta — quedan ' + daysToEnd + ' días para cambiar de plan.';
-  } else {
-    var nextStart = new Date(year + 1, 9, 15);
-    var daysToNext = Math.ceil((nextStart - now) / msPerDay);
-    textEn = '🗓️ Next Medicare Annual Enrollment starts in ' + daysToNext + ' days (Oct 15).';
-    textEs = '🗓️ La próxima Inscripción Anual de Medicare comienza en ' + daysToNext + ' días (15 oct).';
-  }
-
-  textEl.innerHTML = '<span class="bi"><span class="en">' + textEn + '</span><span class="es">' + textEs + '</span></span> — <a href="#contact" data-lead-source="AEP Banner">' +
-    '<span class="bi"><span class="en">Talk to me</span><span class="es">Hablemos</span></span></a>';
-})();
-
-function dismissAepBanner() {
-  var banner = document.getElementById('aep-banner');
-  banner.style.display = 'none';
-  document.body.classList.add('no-aep-banner');
-  sessionStorage.setItem('aepBannerDismissed', '1');
-}
+/* ===== AEP popup: shows once per browser session ===== */
+var aep=document.getElementById('aep');
+function aepClose(){aep.classList.remove('open');}
+function aepPick(t){aepClose();document.getElementById('f-msg').value=t;}
+aep.addEventListener('click',function(e){if(e.target===aep)aepClose();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')aepClose();});
+setTimeout(function(){
+  try{if(sessionStorage.getItem('aep-seen'))return;sessionStorage.setItem('aep-seen','1');}catch(e){}
+  aep.classList.add('open');aep.querySelector('.x').focus();
+},8000);
 </script>
 </body>
 </html>
